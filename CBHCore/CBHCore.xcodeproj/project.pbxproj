@@ -8,12 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		C3A88A6D23B25C38006D7ACB /* CBHCore.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A88A6B23B25C38006D7ACB /* CBHCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3A88A9823B27B0E006D7ACB /* SecureStorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88A9723B27B0E006D7ACB /* SecureStorageProvider.swift */; };
+		C3A88A9A23B27B29006D7ACB /* CentrifugeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88A9923B27B29006D7ACB /* CentrifugeService.swift */; };
+		C3A88A9C23B27B34006D7ACB /* CentrifugeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88A9B23B27B34006D7ACB /* CentrifugeBuilder.swift */; };
+		C3A88AA023B27B52006D7ACB /* CDPersistenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88A9E23B27B52006D7ACB /* CDPersistenceStore.swift */; };
+		C3A88AA123B27B52006D7ACB /* CDPersistenceStoreAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88A9F23B27B52006D7ACB /* CDPersistenceStoreAdapter.swift */; };
+		C3A88AA323B27BB1006D7ACB /* NotificationCenterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88AA223B27BB1006D7ACB /* NotificationCenterService.swift */; };
+		C3A88AA523B27BC6006D7ACB /* KeyboardVisibilityObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88AA423B27BC6006D7ACB /* KeyboardVisibilityObserver.swift */; };
+		C3A88AA723B27BCE006D7ACB /* BiometricAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88AA623B27BCE006D7ACB /* BiometricAuthService.swift */; };
+		C3A88AA923B27BDB006D7ACB /* MultitaskUIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88AA823B27BDB006D7ACB /* MultitaskUIHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C3A88A6823B25C38006D7ACB /* CBHCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CBHCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A88A6B23B25C38006D7ACB /* CBHCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBHCore.h; sourceTree = "<group>"; };
 		C3A88A6C23B25C38006D7ACB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3A88A9623B27AFC006D7ACB /* UserDefaultProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultProvider.swift; sourceTree = "<group>"; };
+		C3A88A9723B27B0E006D7ACB /* SecureStorageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStorageProvider.swift; sourceTree = "<group>"; };
+		C3A88A9923B27B29006D7ACB /* CentrifugeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentrifugeService.swift; sourceTree = "<group>"; };
+		C3A88A9B23B27B34006D7ACB /* CentrifugeBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentrifugeBuilder.swift; sourceTree = "<group>"; };
+		C3A88A9D23B27B3E006D7ACB /* ConnectivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityService.swift; sourceTree = "<group>"; };
+		C3A88A9E23B27B52006D7ACB /* CDPersistenceStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDPersistenceStore.swift; sourceTree = "<group>"; };
+		C3A88A9F23B27B52006D7ACB /* CDPersistenceStoreAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDPersistenceStoreAdapter.swift; sourceTree = "<group>"; };
+		C3A88AA223B27BB1006D7ACB /* NotificationCenterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterService.swift; sourceTree = "<group>"; };
+		C3A88AA423B27BC6006D7ACB /* KeyboardVisibilityObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardVisibilityObserver.swift; sourceTree = "<group>"; };
+		C3A88AA623B27BCE006D7ACB /* BiometricAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthService.swift; sourceTree = "<group>"; };
+		C3A88AA823B27BDB006D7ACB /* MultitaskUIHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultitaskUIHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,8 +68,27 @@
 			children = (
 				C3A88A6B23B25C38006D7ACB /* CBHCore.h */,
 				C3A88A6C23B25C38006D7ACB /* Info.plist */,
+				C3A88A9523B27AE3006D7ACB /* Services */,
 			);
 			path = CBHCore;
+			sourceTree = "<group>";
+		};
+		C3A88A9523B27AE3006D7ACB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C3A88A9623B27AFC006D7ACB /* UserDefaultProvider.swift */,
+				C3A88A9B23B27B34006D7ACB /* CentrifugeBuilder.swift */,
+				C3A88A9923B27B29006D7ACB /* CentrifugeService.swift */,
+				C3A88A9E23B27B52006D7ACB /* CDPersistenceStore.swift */,
+				C3A88AA623B27BCE006D7ACB /* BiometricAuthService.swift */,
+				C3A88AA423B27BC6006D7ACB /* KeyboardVisibilityObserver.swift */,
+				C3A88AA223B27BB1006D7ACB /* NotificationCenterService.swift */,
+				C3A88AA823B27BDB006D7ACB /* MultitaskUIHandler.swift */,
+				C3A88A9F23B27B52006D7ACB /* CDPersistenceStoreAdapter.swift */,
+				C3A88A9D23B27B3E006D7ACB /* ConnectivityService.swift */,
+				C3A88A9723B27B0E006D7ACB /* SecureStorageProvider.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +134,7 @@
 				TargetAttributes = {
 					C3A88A6723B25C38006D7ACB = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -131,6 +171,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3A88AA023B27B52006D7ACB /* CDPersistenceStore.swift in Sources */,
+				C3A88AA923B27BDB006D7ACB /* MultitaskUIHandler.swift in Sources */,
+				C3A88A9823B27B0E006D7ACB /* SecureStorageProvider.swift in Sources */,
+				C3A88AA523B27BC6006D7ACB /* KeyboardVisibilityObserver.swift in Sources */,
+				C3A88AA123B27B52006D7ACB /* CDPersistenceStoreAdapter.swift in Sources */,
+				C3A88A9A23B27B29006D7ACB /* CentrifugeService.swift in Sources */,
+				C3A88A9C23B27B34006D7ACB /* CentrifugeBuilder.swift in Sources */,
+				C3A88AA723B27BCE006D7ACB /* BiometricAuthService.swift in Sources */,
+				C3A88AA323B27BB1006D7ACB /* NotificationCenterService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +309,7 @@
 		C3A88A7123B25C38006D7ACB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -275,6 +325,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alty.cbh.core.CBHCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -283,6 +334,7 @@
 		C3A88A7223B25C38006D7ACB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
