@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_CBHCoreVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_CBHCoreVersionString[];
+FOUNDATION_EXPORT double Pods_AltyCoreVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_AltyCoreVersionString[];
 

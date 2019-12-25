@@ -1,0 +1,6 @@
+framework module Pods_AltyCore {
+  umbrella header "Pods-AltyCore-umbrella.h"
+
+  export *
+  module * { export * }
+}
