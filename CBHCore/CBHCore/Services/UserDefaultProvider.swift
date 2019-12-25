@@ -7,6 +7,8 @@
 //
 
 import Foundation
+    
+typealias StorageKey = String
 
 protocol UserDefaultsProvider {
 	func bool(forKey defaultName: StorageKey) -> Bool

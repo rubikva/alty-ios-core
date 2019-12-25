@@ -8,6 +8,8 @@
 
 import KeychainAccess
 
+typealias StorageKey = String
+
 protocol SecureStorageProvider {
     func getData(for key: StorageKey) -> Data?
     func set(_ data: Data, for key: StorageKey)
@@ -22,13 +24,13 @@ protocol SecureStorageProvider {
 extension Keychain: SecureStorageProvider {
     
     func getData(for key: StorageKey) -> Data? {
-        let data = self[data: key.rawValue]
+        let data = self[data: key]
         if data?.count == 0 { return nil }
         return data
     }
     
     func set(_ data: Data, for key: StorageKey) {
-        self[data: key.rawValue] = data
+        self[data: key] = data
     }
     
     func getString(for key: StorageKey) -> String? {

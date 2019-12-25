@@ -14,48 +14,6 @@ class CDPersistenceStoreAdapter<Entity: NSManagedObject>: NSObject, NSFetchedRes
     private var sectionKeyPath: String?
     private var frc: NSFetchedResultsController<Entity>?
     
-    // MARK: - Factory methods -
-    
-    class func cardsAdapter() -> CDPersistenceStoreAdapter<Entity> {
-        let request = NSFetchRequest<Entity>(entityName: CardMO.entity().name ?? "")
-        request.sortDescriptors = [NSSortDescriptor(key: "recievedAt", ascending: true)]
-        let adapter = CDPersistenceStoreAdapter(request: request)
-
-        return adapter
-    }
-    
-    class func operationsAdapter() -> CDPersistenceStoreAdapter<Entity> {
-        let request = NSFetchRequest<Entity>(entityName: OperationMO.entity().name ?? "")
-        request.sortDescriptors = [NSSortDescriptor(key: "recievedAt", ascending: true)]
-        let adapter = CDPersistenceStoreAdapter(request: request, sectionKeyPath: "groupingDate")
-
-        return adapter
-    }
-    
-    class func statementsAdapter() -> CDPersistenceStoreAdapter<Entity> {
-        let request = NSFetchRequest<Entity>(entityName: StatementMO.entity().name ?? "")
-        request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
-        let adapter = CDPersistenceStoreAdapter(request: request, sectionKeyPath: "groupingDate")
-
-        return adapter
-    }
-    
-    class func spendingsAdapter() -> CDPersistenceStoreAdapter<Entity> {
-        let request = NSFetchRequest<Entity>(entityName: SpendingsMonthMO.entity().name ?? "")
-        request.sortDescriptors = [NSSortDescriptor(key: "monthID", ascending: true)]
-        let adapter = CDPersistenceStoreAdapter(request: request)
-
-        return adapter
-    }
-    
-    class func spendingsGroupAdapter() -> CDPersistenceStoreAdapter<Entity> {
-        let request = NSFetchRequest<Entity>(entityName: SpendingsGroupMO.entity().name ?? "")
-        request.sortDescriptors = [NSSortDescriptor(key: "total", ascending: false)]
-        let adapter = CDPersistenceStoreAdapter(request: request)
-
-        return adapter
-    }
-    
     // MARK: - Init -
     
     init(request: NSFetchRequest<Entity>, sectionKeyPath: String? = nil) {
@@ -140,7 +98,8 @@ private extension CDPersistenceStoreAdapter {
 
     func fetch() {
         do { try frc?.performFetch() } catch {
-            Logger.error(Logger.storage, "Failed to fetch FRC: \(String(describing: error))")
+            // Logger used to be here
+            print("Failed to fetch FRC: \(String(describing: error))")
         }
     }
 }
