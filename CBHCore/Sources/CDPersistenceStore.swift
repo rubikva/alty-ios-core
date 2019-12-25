@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-protocol CDPersistenceStore: class {
+public protocol CDPersistenceStore: class {
     init(storeName: String, storeType: String)
     
     func uiContext() -> NSManagedObjectContext
@@ -18,12 +18,12 @@ protocol CDPersistenceStore: class {
     func executeRequest(_ request: NSPersistentStoreRequest, in context: NSManagedObjectContext) throws -> Any
 }
 
-class CDPersistenceStoreImpl: CDPersistenceStore {
+public class CDPersistenceStoreImpl: CDPersistenceStore {
     
     private var container: NSPersistentContainer
     private let storeType: String
     
-    required init(storeName: String, storeType: String) {
+    public required init(storeName: String, storeType: String) {
         self.storeType = storeType
         self.container = NSPersistentContainer(name: storeName)
         
@@ -44,22 +44,22 @@ class CDPersistenceStoreImpl: CDPersistenceStore {
         }
     }
     
-    func uiContext() -> NSManagedObjectContext {
+    public func uiContext() -> NSManagedObjectContext {
         container.viewContext.automaticallyMergesChangesFromParent = true
         return container.viewContext
     }
     
-    func backgroundContext() -> NSManagedObjectContext {
+    public func backgroundContext() -> NSManagedObjectContext {
         let context = container.newBackgroundContext()
         context.automaticallyMergesChangesFromParent = true
         return context
     }
     
-    func perform(_ action: @escaping (NSManagedObjectContext) -> Void) {
+    public func perform(_ action: @escaping (NSManagedObjectContext) -> Void) {
         container.performBackgroundTask(action)
     }
     
-    func executeRequest(_ request: NSPersistentStoreRequest, in context: NSManagedObjectContext) throws -> Any {
+    public func executeRequest(_ request: NSPersistentStoreRequest, in context: NSManagedObjectContext) throws -> Any {
         try container.persistentStoreCoordinator.execute(request, with: context)
     }
 }

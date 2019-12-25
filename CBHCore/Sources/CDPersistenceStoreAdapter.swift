@@ -8,7 +8,7 @@
 
 import CoreData
 
-class CDPersistenceStoreAdapter<Entity: NSManagedObject>: NSObject, NSFetchedResultsControllerDelegate {
+public class CDPersistenceStoreAdapter<Entity: NSManagedObject>: NSObject, NSFetchedResultsControllerDelegate {
     private weak var store: CDPersistenceStore?
     private var request: NSFetchRequest<Entity>
     private var sectionKeyPath: String?
@@ -16,17 +16,17 @@ class CDPersistenceStoreAdapter<Entity: NSManagedObject>: NSObject, NSFetchedRes
     
     // MARK: - Init -
     
-    init(request: NSFetchRequest<Entity>, sectionKeyPath: String? = nil) {
+    public init(request: NSFetchRequest<Entity>, sectionKeyPath: String? = nil) {
         self.request = request
         self.sectionKeyPath = sectionKeyPath
     }
     
     // MARK: - CBHStoreAdapter
     
-    var contentChangedCallback: (() -> ())?
-    var objectChangedCallback: ((IndexPath?, NSFetchedResultsChangeType, IndexPath?) -> ())?
+    public var contentChangedCallback: (() -> ())?
+    public var objectChangedCallback: ((IndexPath?, NSFetchedResultsChangeType, IndexPath?) -> ())?
     
-    var allItems: [Entity] {
+    public var allItems: [Entity] {
         guard let sections = frc?.sections else { return [] }
         var allObjects: [Entity] = []
         for (index, _) in sections.enumerated() {
@@ -35,33 +35,33 @@ class CDPersistenceStoreAdapter<Entity: NSManagedObject>: NSObject, NSFetchedRes
         return allObjects
     }
 
-    func updateFetchRequest(with newRequest: NSFetchRequest<Entity>) {
+    public func updateFetchRequest(with newRequest: NSFetchRequest<Entity>) {
         self.request = newRequest
         self.frc?.fetchRequest.predicate = newRequest.predicate
         fetch()
     }
     
-    func bind(to store: CDPersistenceStore, with predicate: NSPredicate? = nil) {
+    public func bind(to store: CDPersistenceStore, with predicate: NSPredicate? = nil) {
         self.store = store
         buildFRC(with: predicate)
         fetch()
     }
     
-    func sectionsCount() -> Int {
+    public func sectionsCount() -> Int {
         return frc?.sections?.count ?? 0
     }
     
-    func titleForSection(_ section: Int) -> String {
+    public func titleForSection(_ section: Int) -> String {
         if sectionsCount() <= section { return "" }
         return frc?.sections?[section].name ?? ""
     }
     
-    func itemsCount(in section: Int) -> Int {
+    public func itemsCount(in section: Int) -> Int {
         if sectionsCount() <= section { return 0 }
         return frc?.sections?[section].numberOfObjects ?? 0
     }
     
-    func item(at indexPath: IndexPath) -> Entity? {
+    public func item(at indexPath: IndexPath) -> Entity? {
         // Additional check to avoid exception when FRC has not fetched data yet
         if (frc?.fetchedObjects?.count == 0) {
             return nil
@@ -70,15 +70,15 @@ class CDPersistenceStoreAdapter<Entity: NSManagedObject>: NSObject, NSFetchedRes
         return frc?.object(at: indexPath)
     }
 
-    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+    public func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         contentChangedCallback?()
     }
     
-    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+    public func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         objectChangedCallback?(indexPath, type, newIndexPath)
     }
 
-    func itemsInSection(_ sectionIndex: Int) -> [Entity] {
+    public func itemsInSection(_ sectionIndex: Int) -> [Entity] {
         guard let sections = frc?.sections, sections.count > sectionIndex else { return [] }
         return sections[sectionIndex].objects as! [Entity]
     }
