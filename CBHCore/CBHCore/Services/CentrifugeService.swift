@@ -33,7 +33,8 @@ class CentrifugeService: APIBackChannel {
     }
     
     func connect(_ request: APIBackConnectionRequest) {
-        Logger.log(Logger.centrifuge, "Connecting: %@ : %@", request.token, request.channel)
+//        Logger.log(Logger.centrifuge, "Connecting: %@ : %@", request.token, request.channel)
+        print("Centrifuge connecting: %@ : %@", request.token, request.channel)
         
         disconnect()
         client = clientBuilder.buildClient(endpoint: request.endpoint, token: request.token)
@@ -56,22 +57,26 @@ class CentrifugeService: APIBackChannel {
 
 extension CentrifugeService: CentrifugeClientDelegate {
     func onConnect(_ c: CentrifugeClient, _ e: CentrifugeConnectEvent) {
-        Logger.log(Logger.centrifuge, "Connected")
+        //Logger.log(Logger.centrifuge, "Connected")
+        print("Centrifuge connected")
     }
     
     func onDisconnect(_ c: CentrifugeClient, _ e: CentrifugeDisconnectEvent) {
-        Logger.log(Logger.centrifuge, "Disconnected")
+        //Logger.log(Logger.centrifuge, "Disconnected")
+        print("Centrifuge disconnected")
     }
 }
 
 extension CentrifugeService: CentrifugeSubscriptionDelegate {
     
     func onSubscribeError(_ s: CentrifugeSubscription, _ e: CentrifugeSubscribeErrorEvent) {
-        Logger.log(Logger.centrifuge, "Subscription failed: %s: %d", e.message, e.code)
+        //Logger.log(Logger.centrifuge, "Subscription failed: %s: %d", e.message, e.code)
+        print("Centrifuge subscription failed: %s: %d", e.message, e.code)
     }
     
     func onPublish(_ s: CentrifugeSubscription, _ e: CentrifugePublishEvent) {
-        Logger.log(Logger.centrifuge, "Got data: %@", e.data.debugDescription)
+        //Logger.log(Logger.centrifuge, "Got data: %@", e.data.debugDescription)
+        print("Centrifuge got data: %@", e.data.debugDescription)
         dataCallback?(e.data)
     }
     
