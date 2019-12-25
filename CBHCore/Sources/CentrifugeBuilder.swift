@@ -8,12 +8,14 @@
 
 import SwiftCentrifuge
 
-class CentrifugeBuilder {    
-    func buildClient(endpoint: URL, token: String) -> CentrifugeClient {
+public class CentrifugeBuilder {
+    public func buildClient(endpoint: URL, token: String) -> CentrifugeClient {
         let config = CentrifugeClientConfig()
         let client = CentrifugeClient(url: endpoint.absoluteString, config: config)
         client.setToken(token)
         
         return client
     }
+    
+    public init() {}
 }

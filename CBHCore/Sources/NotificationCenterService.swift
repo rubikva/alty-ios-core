@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol NotificationCenterService {
+public protocol NotificationCenterService {
     func post(name aName: Notification.Name, object anObject: Any?)
     func post(name aName: NSNotification.Name, object anObject: Any?, userInfo aUserInfo: [AnyHashable : Any]?)
   
@@ -19,7 +19,7 @@ protocol NotificationCenterService {
 extension NotificationCenter: NotificationCenterService {}
 
 extension NotificationCenter {
-    func addObserver(forName name: Notification.Name?, using block: @escaping (Notification) -> Swift.Void) {
+    public func addObserver(forName name: Notification.Name?, using block: @escaping (Notification) -> Swift.Void) {
         NotificationCenter.default.addObserver(forName: name, object: nil, queue: nil, using: block)
     }
 }

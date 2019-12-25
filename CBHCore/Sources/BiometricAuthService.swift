@@ -9,12 +9,12 @@
 import Foundation
 import LocalAuthentication
 
-enum BiometryType {
+public enum BiometryType {
     case none
     case touchID
     case faceID
 
-    var description: String {
+    public var description: String {
         switch self {
         case .touchID:
             return "Touch ID"
@@ -26,29 +26,34 @@ enum BiometryType {
     }
 }
 
-typealias BiometricAuthResultCompletion = (BiometricAuthResult) -> Void
+public typealias BiometricAuthResultCompletion = (BiometricAuthResult) -> Void
 
-enum BiometricAuthResult {
+public enum BiometricAuthResult {
     case success
     case cancelled
     case error(description: String)
 }
 
-protocol BiometricAuthService {
+public protocol BiometricAuthService {
     var availableBiometryType: BiometryType { get }
     func authenticate(reason: String, completion: @escaping BiometricAuthResultCompletion)
 }
 
-class BiometricAuthServiceImpl: BiometricAuthService {
+public class BiometricAuthServiceImpl: BiometricAuthService {
     
     // MARK: - Pivate Variables
     
-    private var authentificationContext = LAContext()
-    private let laPolicy: LAPolicy = .deviceOwnerAuthenticationWithBiometrics
+    private var authentificationContext: LAContext
+    private let laPolicy: LAPolicy
     
     // MARK: - Public
     
-    var availableBiometryType: BiometryType {
+    public init() {
+        authentificationContext = LAContext()
+        laPolicy = .deviceOwnerAuthenticationWithBiometrics
+    }
+    
+    public var availableBiometryType: BiometryType {
         let _ = authentificationContext.canEvaluatePolicy(laPolicy, error: nil)
         let biometryType = authentificationContext.biometryType
         switch biometryType {
@@ -61,7 +66,7 @@ class BiometricAuthServiceImpl: BiometricAuthService {
         }
     }
     
-    func authenticate(reason: String, completion: @escaping BiometricAuthResultCompletion) {
+    public func authenticate(reason: String, completion: @escaping BiometricAuthResultCompletion) {
         
         refreshContext()
         
@@ -95,6 +100,8 @@ class BiometricAuthServiceImpl: BiometricAuthService {
         }
     }
 }
+
+// MARK: - Private
 
 private extension BiometricAuthServiceImpl {
     func refreshContext() {

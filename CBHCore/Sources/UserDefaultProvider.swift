@@ -1,5 +1,5 @@
-    //
-//  RootModuleInteractor.swift
+//
+//  UserDefaultsProvider.swift
 //  cbh-cards-ios
 //
 //  Created by Deszip on 09/09/2019.
@@ -7,36 +7,36 @@
 //
 
 import Foundation
-
-protocol UserDefaultsProvider {
+   
+public protocol UserDefaultsProvider {
 	func bool(forKey defaultName: StorageKey) -> Bool
     func string(forKey defaultName: StorageKey) -> String?
     func URL(forKey defaultName: StorageKey) -> URL?
     
     func setURL(_ url: URL?, forKey defaultName: StorageKey)
-    func set(_ value: Any?, forKey defaultName: StorageKey)
+    func setValue(_ value: Any?, forKey defaultName: StorageKey)
     func value(forKey key: String) -> Any?
 }
 
 extension UserDefaults: UserDefaultsProvider {
     
-    func set(_ value: Any?, forKey defaultName: StorageKey) {
-        self.set(value, forKey: defaultName)
+    public func setValue(_ value: Any?, forKey defaultName: StorageKey) {
+        self.set(value, forKey: defaultName.value)
     }
     
-    func bool(forKey defaultName: StorageKey) -> Bool {
-        return self.bool(forKey: defaultName)
+    public func bool(forKey defaultName: StorageKey) -> Bool {
+        return self.bool(forKey: defaultName.value)
     }
     
-    func string(forKey defaultName: StorageKey) -> String? {
-        return self.string(forKey: defaultName)
+    public func string(forKey defaultName: StorageKey) -> String? {
+        return self.string(forKey: defaultName.value)
     }
     
-    func URL(forKey defaultName: StorageKey) -> URL? {
-        return self.url(forKey: defaultName)
+    public func URL(forKey defaultName: StorageKey) -> URL? {
+        return self.url(forKey: defaultName.value)
     }
     
-    func setURL(_ url: URL?, forKey defaultName: StorageKey) {
-        self.set(url, forKey: defaultName)
+    public func setURL(_ url: URL?, forKey defaultName: StorageKey) {
+        self.set(url, forKey: defaultName.value)
     }
 }

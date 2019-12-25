@@ -5,21 +5,21 @@
 
 import Alamofire
 
-protocol ConnectivityStatusListener: class {
+public protocol ConnectivityStatusListener: class {
     func statusChanged(_ isReachable: Bool)
 }
 
-class ConnectivityService {
+public class ConnectivityService {
     
 	private let manager: NetworkReachabilityManager
 	
-    weak var listener: ConnectivityStatusListener?
+    public weak var listener: ConnectivityStatusListener?
 
-	init(hostName: String) {
+	public init(hostName: String) {
         manager = NetworkReachabilityManager(host: hostName)!
 	}
 
-	func startListening() {
+	public func startListening() {
 		manager.listener = { status in
 			let isReachable = (status != .unknown) && (status != .notReachable)
 			self.listener?.statusChanged(isReachable)
@@ -28,7 +28,7 @@ class ConnectivityService {
 		manager.startListening()
 	}
 
-	func stopListening() {
+	public func stopListening() {
 		manager.stopListening()
 	}
 }

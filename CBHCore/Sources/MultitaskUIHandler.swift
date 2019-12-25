@@ -8,16 +8,16 @@
 
 import UIKit
 
-class MultitaskUIHandler {
+public class MultitaskUIHandler {
     
-    enum State {
+    public enum State {
         case active
         case inactive
     }
     
     weak private var blurView: UIVisualEffectView?
     
-    func transition(appWindow: UIWindow, to state: State) {
+    public func transition(appWindow: UIWindow, to state: State) {
         switch state {
         case .active:
             UIView.animate(withDuration: 0.3, animations: {
@@ -36,4 +36,6 @@ class MultitaskUIHandler {
             self.blurView = blurEffectView
         }
     }
+    
+    public init() {}
 }

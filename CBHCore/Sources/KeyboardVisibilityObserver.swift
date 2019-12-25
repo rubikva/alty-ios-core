@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-protocol KeyboardVisibilityObserver {
+public protocol KeyboardVisibilityObserver {
   var delegate: KeyboardVisibilityObserverDelegate? { get set }
   func startObserving()
   func stopObserving()
 }
 
-@objc protocol KeyboardVisibilityObserverDelegate: class {
+@objc public protocol KeyboardVisibilityObserverDelegate: class {
     @objc optional func keyboardWillShowWithHeight(_ keyboardHeight: CGFloat, duration: Double, curve: UIView.AnimationOptions)
     @objc optional func keyboardDidShowWithHeight(_ keyboardHeight: CGFloat, duration: Double, curve: UIView.AnimationOptions)
     @objc optional func keyboardWillHideWithDuration(_ duration: Double, curve: UIView.AnimationOptions)
@@ -24,11 +24,11 @@ protocol KeyboardVisibilityObserver {
     @objc optional func animateAlongsideKeyboardTransition(_ isShowing: Bool, keyboardHeight: CGFloat)
 }
 
-class KeyboardVisibilityObserverImpl: KeyboardVisibilityObserver {
+public class KeyboardVisibilityObserverImpl: KeyboardVisibilityObserver {
 
     // MARK: - Public Variables
 
-    weak var delegate: KeyboardVisibilityObserverDelegate?
+    weak public var delegate: KeyboardVisibilityObserverDelegate?
 
     // MARK: - Private Variables
 
@@ -36,7 +36,7 @@ class KeyboardVisibilityObserverImpl: KeyboardVisibilityObserver {
 
     // MARK: - Init
 
-    init(notificationCenter: NotificationCenter = NotificationCenter.default) {
+    public init(notificationCenter: NotificationCenter = NotificationCenter.default) {
         self.notificationCenter = notificationCenter
     }
 
@@ -46,7 +46,7 @@ class KeyboardVisibilityObserverImpl: KeyboardVisibilityObserver {
 
     // MARK: - ObserverType
 
-    func startObserving() {
+    public func startObserving() {
         self.notificationCenter.addObserver(self,
                                             selector: #selector(keyboardWillShowNotification),
                                             name: UIResponder.keyboardWillShowNotification,
@@ -69,7 +69,7 @@ class KeyboardVisibilityObserverImpl: KeyboardVisibilityObserver {
                                             object: nil)
     }
 
-    func stopObserving() {
+    public func stopObserving() {
         notificationCenter.removeObserver(self)
     }
 
@@ -159,7 +159,7 @@ class KeyboardVisibilityObserverImpl: KeyboardVisibilityObserver {
 
         let keyboardHeight = keyboardRect.size.height
         var animationOptions = UIView.AnimationOptions()
-      if let rawAnimationOptionsValue = (info[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber)?.uintValue {
+        if let rawAnimationOptionsValue = (info[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber)?.uintValue {
             animationOptions = UIView.AnimationOptions(rawValue: rawAnimationOptionsValue << 16)
         }
 
