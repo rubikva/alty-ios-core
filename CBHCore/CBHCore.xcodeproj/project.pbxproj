@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95115385477252892F42119E /* Pods_CBHCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D37F699292CCFB54DE0A505B /* Pods_CBHCore.framework */; };
 		C3A88A6D23B25C38006D7ACB /* CBHCore.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A88A6B23B25C38006D7ACB /* CBHCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3A88A9823B27B0E006D7ACB /* SecureStorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88A9723B27B0E006D7ACB /* SecureStorageProvider.swift */; };
 		C3A88A9A23B27B29006D7ACB /* CentrifugeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88A9923B27B29006D7ACB /* CentrifugeService.swift */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7570A1F78DC471F7EF29186F /* Pods-CBHCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CBHCore.release.xcconfig"; path = "Target Support Files/Pods-CBHCore/Pods-CBHCore.release.xcconfig"; sourceTree = "<group>"; };
+		A761457AE7DDB6AA60D18AED /* Pods-CBHCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CBHCore.debug.xcconfig"; path = "Target Support Files/Pods-CBHCore/Pods-CBHCore.debug.xcconfig"; sourceTree = "<group>"; };
 		C3A88A6823B25C38006D7ACB /* CBHCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CBHCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A88A6B23B25C38006D7ACB /* CBHCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBHCore.h; sourceTree = "<group>"; };
 		C3A88A6C23B25C38006D7ACB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		C3A88AA423B27BC6006D7ACB /* KeyboardVisibilityObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardVisibilityObserver.swift; sourceTree = "<group>"; };
 		C3A88AA623B27BCE006D7ACB /* BiometricAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthService.swift; sourceTree = "<group>"; };
 		C3A88AA823B27BDB006D7ACB /* MultitaskUIHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultitaskUIHandler.swift; sourceTree = "<group>"; };
+		D37F699292CCFB54DE0A505B /* Pods_CBHCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CBHCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +45,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95115385477252892F42119E /* Pods_CBHCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25E7F8DBF44DAC19B5767C5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D37F699292CCFB54DE0A505B /* Pods_CBHCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9899E7890562FFC67A10BCC0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A761457AE7DDB6AA60D18AED /* Pods-CBHCore.debug.xcconfig */,
+				7570A1F78DC471F7EF29186F /* Pods-CBHCore.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C3A88A5E23B25C38006D7ACB = {
 			isa = PBXGroup;
 			children = (
 				C3A88A6A23B25C38006D7ACB /* CBHCore */,
 				C3A88A6923B25C38006D7ACB /* Products */,
+				9899E7890562FFC67A10BCC0 /* Pods */,
+				25E7F8DBF44DAC19B5767C5F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +134,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3A88A7023B25C38006D7ACB /* Build configuration list for PBXNativeTarget "CBHCore" */;
 			buildPhases = (
+				29991F7D947123896EF3FBB9 /* [CP] Check Pods Manifest.lock */,
 				C3A88A6323B25C38006D7ACB /* Headers */,
 				C3A88A6423B25C38006D7ACB /* Sources */,
 				C3A88A6523B25C38006D7ACB /* Frameworks */,
@@ -165,6 +191,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29991F7D947123896EF3FBB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CBHCore-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C3A88A6423B25C38006D7ACB /* Sources */ = {
@@ -308,6 +359,7 @@
 		};
 		C3A88A7123B25C38006D7ACB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A761457AE7DDB6AA60D18AED /* Pods-CBHCore.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -333,6 +385,7 @@
 		};
 		C3A88A7223B25C38006D7ACB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7570A1F78DC471F7EF29186F /* Pods-CBHCore.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
