@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
   spec.swift_version = '5.0'
 
   spec.source       = { :git => "https://s_horielov@bitbucket.org/cbh-core-ios.git", :tag => "#{spec.version}" }
-  spec.source_files  = "Sources", "Sources/**/*.{h,m,swift}"
+  spec.source_files  = "CBHCore", "CBHCore/**/*.{h,m,swift}"
 
   spec.dependency 'SwiftCentrifuge'
   spec.dependency 'Alamofire'

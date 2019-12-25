@@ -66,8 +66,16 @@
 				A761457AE7DDB6AA60D18AED /* Pods-CBHCore.debug.xcconfig */,
 				7570A1F78DC471F7EF29186F /* Pods-CBHCore.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C34B9F6223B397880005A85C /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				C3A88A6B23B25C38006D7ACB /* CBHCore.h */,
+				C3A88A6C23B25C38006D7ACB /* Info.plist */,
+			);
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 		C3A88A5E23B25C38006D7ACB = {
@@ -91,14 +99,13 @@
 		C3A88A6A23B25C38006D7ACB /* CBHCore */ = {
 			isa = PBXGroup;
 			children = (
-				C3A88A6B23B25C38006D7ACB /* CBHCore.h */,
-				C3A88A6C23B25C38006D7ACB /* Info.plist */,
-				C3A88A9523B27AE3006D7ACB /* Services */,
+				C34B9F6223B397880005A85C /* Supporting */,
+				C3A88A9523B27AE3006D7ACB /* Sources */,
 			);
 			path = CBHCore;
 			sourceTree = "<group>";
 		};
-		C3A88A9523B27AE3006D7ACB /* Services */ = {
+		C3A88A9523B27AE3006D7ACB /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				C3A88A9623B27AFC006D7ACB /* UserDefaultProvider.swift */,
@@ -113,7 +120,7 @@
 				C3A88A9D23B27B3E006D7ACB /* ConnectivityService.swift */,
 				C3A88A9723B27B0E006D7ACB /* SecureStorageProvider.swift */,
 			);
-			path = Services;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,7 +374,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CBHCore/Info.plist;
+				INFOPLIST_FILE = CBHCore/Supporting/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -393,7 +400,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CBHCore/Info.plist;
+				INFOPLIST_FILE = CBHCore/Supporting/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
