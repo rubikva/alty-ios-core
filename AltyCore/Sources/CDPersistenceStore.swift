@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 public protocol CDPersistenceStore: class {
-    init(storeName: String, storeType: String, modelURL: URL)
+    init(storeName: String, bundle: Bundle, storeType: String)
     
     func uiContext() -> NSManagedObjectContext
     func backgroundContext() -> NSManagedObjectContext
@@ -23,10 +23,14 @@ public class CDPersistenceStoreImpl: CDPersistenceStore {
     private var container: NSPersistentContainer
     private let storeType: String
     
-    public required init(storeName: String, storeType: String, modelURL: URL) {
-        guard let managedObjectModel = NSManagedObjectModel(contentsOf: modelURL) else {
+    public required init(storeName: String, bundle: Bundle, storeType: String) {
+        guard
+            let modelURL = bundle.url(forResource: storeName, withExtension: "momd"),
+            let managedObjectModel = NSManagedObjectModel(contentsOf: modelURL)
+        else {
             fatalError("Couldn't find database momd")
         }
+        
         self.storeType = storeType
         self.container = NSPersistentContainer(name: storeName, managedObjectModel: managedObjectModel)
         setupContainer()
