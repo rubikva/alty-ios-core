@@ -1,38 +1,20 @@
 PODS:
   - Alamofire (4.9.1)
   - KeychainAccess (4.1.0)
-  - Starscream (3.1.1)
-  - SwiftCentrifuge (0.0.3):
-    - Starscream
-    - SwiftProtobuf
-  - SwiftProtobuf (1.7.0)
-  - SwiftyRSA (1.5.0):
-    - SwiftyRSA/ObjC (= 1.5.0)
-  - SwiftyRSA/ObjC (1.5.0)
 
 DEPENDENCIES:
   - Alamofire
   - KeychainAccess
-  - SwiftCentrifuge
-  - SwiftyRSA
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - KeychainAccess
-    - Starscream
-    - SwiftCentrifuge
-    - SwiftProtobuf
-    - SwiftyRSA
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   KeychainAccess: 445e28864fe6d3458b41fa211bcdc39890e8bd5a
-  Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
-  SwiftCentrifuge: bdba5549fd144a07e793de0295fe28685cb7b370
-  SwiftProtobuf: 4fd9645e69b72cbae6ec8da5be0cdd20ca6565dd
-  SwiftyRSA: 6e528fb1b1a87d5111c48081083b141d6d65f1cf
 
-PODFILE CHECKSUM: d5d2e4b7b900d1c12b8388ec75f6302c316ab916
+PODFILE CHECKSUM: 90e8cf6a238a5ac3656d6634d7db1f20c6165e49
 
 COCOAPODS: 1.8.4

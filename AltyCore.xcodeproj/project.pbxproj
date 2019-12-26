@@ -10,14 +10,13 @@
 		1A505A79EFC15167DCCAB597 /* Pods_AltyCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36020EF1FCCD6A19F806011 /* Pods_AltyCore.framework */; };
 		C3A88A6D23B25C38006D7ACB /* AltyCore.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A88A6B23B25C38006D7ACB /* AltyCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3A88A9823B27B0E006D7ACB /* SecureStorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88A9723B27B0E006D7ACB /* SecureStorageProvider.swift */; };
-		C3A88A9A23B27B29006D7ACB /* CentrifugeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88A9923B27B29006D7ACB /* CentrifugeService.swift */; };
-		C3A88A9C23B27B34006D7ACB /* CentrifugeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88A9B23B27B34006D7ACB /* CentrifugeBuilder.swift */; };
 		C3A88AA023B27B52006D7ACB /* CDPersistenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88A9E23B27B52006D7ACB /* CDPersistenceStore.swift */; };
 		C3A88AA123B27B52006D7ACB /* CDPersistenceStoreAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88A9F23B27B52006D7ACB /* CDPersistenceStoreAdapter.swift */; };
 		C3A88AA323B27BB1006D7ACB /* NotificationCenterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88AA223B27BB1006D7ACB /* NotificationCenterService.swift */; };
 		C3A88AA523B27BC6006D7ACB /* KeyboardVisibilityObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88AA423B27BC6006D7ACB /* KeyboardVisibilityObserver.swift */; };
 		C3A88AA723B27BCE006D7ACB /* BiometricAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88AA623B27BCE006D7ACB /* BiometricAuthService.swift */; };
 		C3A88AA923B27BDB006D7ACB /* MultitaskUIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88AA823B27BDB006D7ACB /* MultitaskUIHandler.swift */; };
+		C3D106C723B4E55B002360E0 /* StorageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D106C623B4E55B002360E0 /* StorageKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +27,6 @@
 		C3A88A6C23B25C38006D7ACB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3A88A9623B27AFC006D7ACB /* UserDefaultProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultProvider.swift; sourceTree = "<group>"; };
 		C3A88A9723B27B0E006D7ACB /* SecureStorageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStorageProvider.swift; sourceTree = "<group>"; };
-		C3A88A9923B27B29006D7ACB /* CentrifugeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentrifugeService.swift; sourceTree = "<group>"; };
-		C3A88A9B23B27B34006D7ACB /* CentrifugeBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentrifugeBuilder.swift; sourceTree = "<group>"; };
 		C3A88A9D23B27B3E006D7ACB /* ConnectivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityService.swift; sourceTree = "<group>"; };
 		C3A88A9E23B27B52006D7ACB /* CDPersistenceStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDPersistenceStore.swift; sourceTree = "<group>"; };
 		C3A88A9F23B27B52006D7ACB /* CDPersistenceStoreAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDPersistenceStoreAdapter.swift; sourceTree = "<group>"; };
@@ -37,6 +34,7 @@
 		C3A88AA423B27BC6006D7ACB /* KeyboardVisibilityObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardVisibilityObserver.swift; sourceTree = "<group>"; };
 		C3A88AA623B27BCE006D7ACB /* BiometricAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthService.swift; sourceTree = "<group>"; };
 		C3A88AA823B27BDB006D7ACB /* MultitaskUIHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultitaskUIHandler.swift; sourceTree = "<group>"; };
+		C3D106C623B4E55B002360E0 /* StorageKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageKey.swift; sourceTree = "<group>"; };
 		EB2901D0D7236A6FA611B728 /* Pods-AltyCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltyCore.debug.xcconfig"; path = "Target Support Files/Pods-AltyCore/Pods-AltyCore.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,19 +106,58 @@
 		C3A88A9523B27AE3006D7ACB /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C3EBCECE23B4E3D3002D6426 /* DefaultsStorage */,
+				C3EBCECF23B4E3E1002D6426 /* Persistence */,
+				C3EBCED123B4E403002D6426 /* Authentication */,
+				C3EBCED223B4E41F002D6426 /* Tools */,
+				C3EBCED023B4E3F2002D6426 /* Networking */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C3EBCECE23B4E3D3002D6426 /* DefaultsStorage */ = {
+			isa = PBXGroup;
+			children = (
 				C3A88A9623B27AFC006D7ACB /* UserDefaultProvider.swift */,
-				C3A88A9B23B27B34006D7ACB /* CentrifugeBuilder.swift */,
-				C3A88A9923B27B29006D7ACB /* CentrifugeService.swift */,
+				C3A88A9723B27B0E006D7ACB /* SecureStorageProvider.swift */,
+				C3D106C623B4E55B002360E0 /* StorageKey.swift */,
+			);
+			path = DefaultsStorage;
+			sourceTree = "<group>";
+		};
+		C3EBCECF23B4E3E1002D6426 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
 				C3A88A9E23B27B52006D7ACB /* CDPersistenceStore.swift */,
+				C3A88A9F23B27B52006D7ACB /* CDPersistenceStoreAdapter.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		C3EBCED023B4E3F2002D6426 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C3A88A9D23B27B3E006D7ACB /* ConnectivityService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C3EBCED123B4E403002D6426 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
 				C3A88AA623B27BCE006D7ACB /* BiometricAuthService.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		C3EBCED223B4E41F002D6426 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
 				C3A88AA423B27BC6006D7ACB /* KeyboardVisibilityObserver.swift */,
 				C3A88AA223B27BB1006D7ACB /* NotificationCenterService.swift */,
 				C3A88AA823B27BDB006D7ACB /* MultitaskUIHandler.swift */,
-				C3A88A9F23B27B52006D7ACB /* CDPersistenceStoreAdapter.swift */,
-				C3A88A9D23B27B3E006D7ACB /* ConnectivityService.swift */,
-				C3A88A9723B27B0E006D7ACB /* SecureStorageProvider.swift */,
 			);
-			path = Sources;
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,12 +267,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3A88AA023B27B52006D7ACB /* CDPersistenceStore.swift in Sources */,
+				C3D106C723B4E55B002360E0 /* StorageKey.swift in Sources */,
 				C3A88AA923B27BDB006D7ACB /* MultitaskUIHandler.swift in Sources */,
 				C3A88A9823B27B0E006D7ACB /* SecureStorageProvider.swift in Sources */,
 				C3A88AA523B27BC6006D7ACB /* KeyboardVisibilityObserver.swift in Sources */,
 				C3A88AA123B27B52006D7ACB /* CDPersistenceStoreAdapter.swift in Sources */,
-				C3A88A9A23B27B29006D7ACB /* CentrifugeService.swift in Sources */,
-				C3A88A9C23B27B34006D7ACB /* CentrifugeBuilder.swift in Sources */,
 				C3A88AA723B27BCE006D7ACB /* BiometricAuthService.swift in Sources */,
 				C3A88AA323B27BB1006D7ACB /* NotificationCenterService.swift in Sources */,
 			);
