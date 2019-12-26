@@ -5,4 +5,10 @@ inhibit_all_warnings!
 target 'AltyCore' do
   pod 'KeychainAccess'
   pod 'Alamofire'
+  
+  target 'AltyCoreTests' do
+    inherit! :search_paths
+    pod 'Nimble'
+    pod 'InstantMock'
+  end
 end 

@@ -1,20 +1,28 @@
 PODS:
   - Alamofire (4.9.1)
+  - InstantMock (2.5.4)
   - KeychainAccess (4.1.0)
+  - Nimble (8.0.4)
 
 DEPENDENCIES:
   - Alamofire
+  - InstantMock
   - KeychainAccess
+  - Nimble
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - InstantMock
     - KeychainAccess
+    - Nimble
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  InstantMock: b078864ae725de35aff01510afa8b668b666fc2d
   KeychainAccess: 445e28864fe6d3458b41fa211bcdc39890e8bd5a
+  Nimble: 18d5360282923225d62b09d781f63abc1a0111fc
 
-PODFILE CHECKSUM: 90e8cf6a238a5ac3656d6634d7db1f20c6165e49
+PODFILE CHECKSUM: 64cb6161c12c77563d680a4efbf84601a00a01b4
 
 COCOAPODS: 1.8.4
