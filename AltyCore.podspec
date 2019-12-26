@@ -4,7 +4,7 @@ Pod::Spec.new do |spec|
   spec.summary      = "AltyCore is pod with shared core functionality"
   spec.description  = "extracted base functionality"
 
-  spec.homepage     = "https://bitbucket.org/product/"
+  spec.homepage     = "https://bitbucket.org/alterplay/cbh-cards-ios/src/develop/"
   spec.license      = { :type => "MIT", :text => "" }
   spec.author             = { "Serhii Horielov" => "s.horielov@alterplay.com" }
 
