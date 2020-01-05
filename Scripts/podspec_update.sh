@@ -49,10 +49,14 @@ TAG_DIR="$TRUNK_DIR/Specs/$PROJECT_NAME/$VERSION_NUMBER"
 if [ ! -d "$TAG_DIR" ]; then 
   mkdir $TAG_DIR
   cp ./$PODSPEC_FILE $TAG_DIR
-  cd $WORKING_DIR
+  cd $TRUNK_DIR
   git add .
   git commit -am "$VERSION_NUMBER"
-  # git push origin master
+  git push origin master
+
+  # Cleanup
+  cd ~
+  rm -Rf $TRUNK_DIR
 else
   echo "Directory for $VERSION_NUMBER" exists in trunk repo, skipping...
 fi
