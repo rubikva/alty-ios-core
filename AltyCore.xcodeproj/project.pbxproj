@@ -619,7 +619,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.0.4;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alty.cbh.core.CBHCore;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alty.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -646,7 +646,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.0.4;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alty.cbh.core.CBHCore;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alty.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
