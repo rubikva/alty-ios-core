@@ -2,13 +2,20 @@ platform :ios, '12.0'
 use_frameworks!
 inhibit_all_warnings!
 
-target 'AltyCore' do
+def corePods
   pod 'KeychainAccess'
   pod 'Alamofire'
+end
+
+target 'AltyCore' do
+  corePods
+end
+
+target 'AltyCoreTests' do
+  inherit! :search_paths
   
-  target 'AltyCoreTests' do
-    inherit! :search_paths
-    pod 'Nimble'
-    pod 'InstantMock'
-  end
-end 
+  corePods
+  
+  pod 'Nimble'
+  pod 'InstantMock'
+end

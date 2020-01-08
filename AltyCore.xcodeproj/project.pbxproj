@@ -3,13 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		114085C9687462833E130D72 /* Pods_AltyCoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7AC8A5A0C687C306082C239 /* Pods_AltyCoreTests.framework */; };
 		1A505A79EFC15167DCCAB597 /* Pods_AltyCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36020EF1FCCD6A19F806011 /* Pods_AltyCore.framework */; };
-		C31C7A5023B4EE0D00F17226 /* AltyCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C7A4F23B4EE0D00F17226 /* AltyCoreTests.swift */; };
 		C31C7A5223B4EE0D00F17226 /* AltyCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A88A6823B25C38006D7ACB /* AltyCore.framework */; };
 		C3A88A6D23B25C38006D7ACB /* AltyCore.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A88A6B23B25C38006D7ACB /* AltyCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3A88A9823B27B0E006D7ACB /* SecureStorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88A9723B27B0E006D7ACB /* SecureStorageProvider.swift */; };
@@ -20,6 +19,11 @@
 		C3A88AA723B27BCE006D7ACB /* BiometricAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88AA623B27BCE006D7ACB /* BiometricAuthService.swift */; };
 		C3A88AA923B27BDB006D7ACB /* MultitaskUIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88AA823B27BDB006D7ACB /* MultitaskUIHandler.swift */; };
 		C3D106C723B4E55B002360E0 /* StorageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D106C623B4E55B002360E0 /* StorageKey.swift */; };
+		D97F65BB23C1E9F000392C3E /* UserDefaultsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97F65BA23C1E9F000392C3E /* UserDefaultsProviderTests.swift */; };
+		D97F65BC23C1EEC100392C3E /* UserDefaultProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88A9623B27AFC006D7ACB /* UserDefaultProvider.swift */; };
+		D97F65BD23C1EED300392C3E /* ConnectivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88A9D23B27B3E006D7ACB /* ConnectivityService.swift */; };
+		D97F65C223C1F53100392C3E /* CDPersistenceStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97F65C123C1F53100392C3E /* CDPersistenceStoreTests.swift */; };
+		D97F65C623C1F56B00392C3E /* mock-model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D97F65C423C1F56B00392C3E /* mock-model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +41,6 @@
 		BF2DF97EFF8A64E07030239B /* Pods-AltyCoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltyCoreTests.release.xcconfig"; path = "Target Support Files/Pods-AltyCoreTests/Pods-AltyCoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		C20E87BF779FBF1DB08B0BBA /* Pods-AltyCoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltyCoreTests.debug.xcconfig"; path = "Target Support Files/Pods-AltyCoreTests/Pods-AltyCoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C31C7A4D23B4EE0D00F17226 /* AltyCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AltyCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C31C7A4F23B4EE0D00F17226 /* AltyCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltyCoreTests.swift; sourceTree = "<group>"; };
 		C31C7A5123B4EE0D00F17226 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C36020EF1FCCD6A19F806011 /* Pods_AltyCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AltyCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A88A6823B25C38006D7ACB /* AltyCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AltyCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +56,9 @@
 		C3A88AA623B27BCE006D7ACB /* BiometricAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthService.swift; sourceTree = "<group>"; };
 		C3A88AA823B27BDB006D7ACB /* MultitaskUIHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultitaskUIHandler.swift; sourceTree = "<group>"; };
 		C3D106C623B4E55B002360E0 /* StorageKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageKey.swift; sourceTree = "<group>"; };
+		D97F65BA23C1E9F000392C3E /* UserDefaultsProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsProviderTests.swift; sourceTree = "<group>"; };
+		D97F65C123C1F53100392C3E /* CDPersistenceStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDPersistenceStoreTests.swift; sourceTree = "<group>"; };
+		D97F65C523C1F56B00392C3E /* mock-model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "mock-model.xcdatamodel"; sourceTree = "<group>"; };
 		E7AC8A5A0C687C306082C239 /* Pods_AltyCoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AltyCoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2901D0D7236A6FA611B728 /* Pods-AltyCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltyCore.debug.xcconfig"; path = "Target Support Files/Pods-AltyCore/Pods-AltyCore.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,8 +107,10 @@
 		C31C7A4E23B4EE0D00F17226 /* AltyCoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				C31C7A4F23B4EE0D00F17226 /* AltyCoreTests.swift */,
 				C31C7A5123B4EE0D00F17226 /* Info.plist */,
+				D97F65C323C1F55200392C3E /* _Mocks */,
+				D97F65B923C1E9D300392C3E /* DefaultsStorage */,
+				D97F65C023C1F50D00392C3E /* Persistence */,
 			);
 			path = AltyCoreTests;
 			sourceTree = "<group>";
@@ -200,6 +208,30 @@
 				C3A88AA823B27BDB006D7ACB /* MultitaskUIHandler.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		D97F65B923C1E9D300392C3E /* DefaultsStorage */ = {
+			isa = PBXGroup;
+			children = (
+				D97F65BA23C1E9F000392C3E /* UserDefaultsProviderTests.swift */,
+			);
+			path = DefaultsStorage;
+			sourceTree = "<group>";
+		};
+		D97F65C023C1F50D00392C3E /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				D97F65C123C1F53100392C3E /* CDPersistenceStoreTests.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		D97F65C323C1F55200392C3E /* _Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D97F65C423C1F56B00392C3E /* mock-model.xcdatamodeld */,
+			);
+			path = _Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,7 +411,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C31C7A5023B4EE0D00F17226 /* AltyCoreTests.swift in Sources */,
+				D97F65C223C1F53100392C3E /* CDPersistenceStoreTests.swift in Sources */,
+				D97F65C623C1F56B00392C3E /* mock-model.xcdatamodeld in Sources */,
+				D97F65BB23C1E9F000392C3E /* UserDefaultsProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,8 +426,10 @@
 				C3A88AA923B27BDB006D7ACB /* MultitaskUIHandler.swift in Sources */,
 				C3A88A9823B27B0E006D7ACB /* SecureStorageProvider.swift in Sources */,
 				C3A88AA523B27BC6006D7ACB /* KeyboardVisibilityObserver.swift in Sources */,
+				D97F65BC23C1EEC100392C3E /* UserDefaultProvider.swift in Sources */,
 				C3A88AA123B27B52006D7ACB /* CDPersistenceStoreAdapter.swift in Sources */,
 				C3A88AA723B27BCE006D7ACB /* BiometricAuthService.swift in Sources */,
+				D97F65BD23C1EED300392C3E /* ConnectivityService.swift in Sources */,
 				C3A88AA323B27BB1006D7ACB /* NotificationCenterService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,14 +613,17 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/AltyCore/Supporting/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alty.cbh.core.CBHCore;
+				MARKETING_VERSION = 0.0.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alty.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -603,14 +642,17 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/AltyCore/Supporting/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alty.cbh.core.CBHCore;
+				MARKETING_VERSION = 0.0.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alty.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -647,6 +689,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D97F65C423C1F56B00392C3E /* mock-model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D97F65C523C1F56B00392C3E /* mock-model.xcdatamodel */,
+			);
+			currentVersion = D97F65C523C1F56B00392C3E /* mock-model.xcdatamodel */;
+			path = "mock-model.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C3A88A5F23B25C38006D7ACB /* Project object */;
 }

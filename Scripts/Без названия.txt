@@ -1,0 +1,66 @@
+  1 #!/bin/bash
+  2
+  3 # fail if any commands fails
+  4 set -e
+  5 # debug log
+  6 set -x
+  7
+  8 # Env
+  9 PROJECT_NAME='AltyCore'
+ 10 PODSPEC_NAME="$PROJECT_NAME.podspec"
+ 11
+ 12 # Get framework plist file
+ 13 PLIST_PATH="./$PROJECT_NAME/Supporting/Info.plist"
+ 14 if [ ! -f "$PLIST_PATH" ]; then
+ 15   echo "Plist file at $PLIST_PATH not found, running not from project root? Exiting..."
+ 16   exit 1
+ 17 fi
+ 18
+ 19 # Get framework version
+ 20 VERSION_NUMBER=`sed -n '/MARKETING_VERSION/{s/MARKETING_VERSION = //;s/;//;s/^[[:space:]]*//;p;q;}' ./$PROJECT_NAME.xcodeproj/project.pbxproj`
+ 21 BUILD_NUMBER=`sed -n '/CURRENT_PROJECT_VERSION/{s/CURRENT_PROJECT_VERSION = //;s/;//;s/^[[:space:]]*//;p;q;}' ./$PROJECT_NAME.xcodeproj/projec    t.pbxproj`
+ 22 echo "Current version: $VERSION_NUMBER ($BUILD_NUMBER), using $VERSION_NUMBER as a tag"
+ 23
+ 24 # Write version to podspec
+ 25 # TODO: Load and parse current podspec file
+ 26
+ 27 echo 'Pod::Spec.new do |spec|
+ 28   spec.name         = '$PROJECT_NAME'
+ 29   spec.version      = '$VERSION_NUMBER'
+ 30   spec.summary      = "Base functionality"
+ 31   spec.description  = '$PROJECT_NAME is pod with shared core functionality'
+ 32
+ 33   spec.homepage     = "https://bitbucket.org/alterplay/alty-ios-core"
+ 34   spec.license      = { :type => "MIT", :text => "" }
+ 35   spec.author       = { "Serhii Horielov" => "s.horielov@alterplay.com" }
+ 36
+ 37   spec.platform      = :ios, "12.0"
+ 38   spec.swift_version = '5.0'
+ 39
+ 40   spec.source        = { :git => "git@bitbucket.org:alterplay/alty-ios-core.git", :tag => "#{spec.version}" }
+ 41   spec.source_files  = '$PROJECT_NAME', '$PROJECT_NAME/**/*.{h,m,swift}'
+ 42
+ 43   spec.dependency 'Alamofire'
+ 44   spec.dependency 'KeychainAccess'
+ 45 end' > ./$PODSPEC_NAME
+ 46
+ 47 # Clone podspec repo
+ 48 WORKING_DIR=/tmp/spec-repo
+ 49 if [ -d "$WORKING_DIR" ]; then rm -Rf $WORKING_DIR; fi
+ 50 git clone git@bitbucket.org:alterplay/alty-ios-podspecs.git $WORKING_DIR
+ 51
+ 52 # Add directory with tag name, copy podspec, push
+ 53 TAG_DIR="$WORKING_DIR/Specs/$PROJECT_NAME/$VERSION_NUMBER"
+ 54 if [ ! -d "$TAG_DIR" ]; then
+ 55   mkdir $TAG_DIR
+ 56   cp ./$PODSPEC_NAME $TAG_DIR
+ 57   cd $WORKING_DIR
+ 58   git add .
+ 59   git commit -am "$VERSION_NUMBER"
+ 60   # git push origin master
+ 61 else
+ 62   echo "Directory for $VERSION_NUMBER" exists in trunk repo, skipping...
+ 63 fi
+ 64
+ 65 # Add tag to Core repo
+ 66 # ...
