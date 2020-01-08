@@ -19,6 +19,10 @@
 		C3A88AA723B27BCE006D7ACB /* BiometricAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88AA623B27BCE006D7ACB /* BiometricAuthService.swift */; };
 		C3A88AA923B27BDB006D7ACB /* MultitaskUIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88AA823B27BDB006D7ACB /* MultitaskUIHandler.swift */; };
 		C3D106C723B4E55B002360E0 /* StorageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D106C623B4E55B002360E0 /* StorageKey.swift */; };
+		C3E15D8723C5E7CB0089457E /* CentrifugeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E15D8523C5E7CB0089457E /* CentrifugeService.swift */; };
+		C3E15D8823C5E7CB0089457E /* CentrifugeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E15D8523C5E7CB0089457E /* CentrifugeService.swift */; };
+		C3E15D8923C5E7CB0089457E /* CentrifugeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E15D8623C5E7CB0089457E /* CentrifugeBuilder.swift */; };
+		C3E15D8A23C5E7CB0089457E /* CentrifugeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E15D8623C5E7CB0089457E /* CentrifugeBuilder.swift */; };
 		D97F65BB23C1E9F000392C3E /* UserDefaultsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97F65BA23C1E9F000392C3E /* UserDefaultsProviderTests.swift */; };
 		D97F65BC23C1EEC100392C3E /* UserDefaultProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88A9623B27AFC006D7ACB /* UserDefaultProvider.swift */; };
 		D97F65BD23C1EED300392C3E /* ConnectivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88A9D23B27B3E006D7ACB /* ConnectivityService.swift */; };
@@ -56,6 +60,8 @@
 		C3A88AA623B27BCE006D7ACB /* BiometricAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthService.swift; sourceTree = "<group>"; };
 		C3A88AA823B27BDB006D7ACB /* MultitaskUIHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultitaskUIHandler.swift; sourceTree = "<group>"; };
 		C3D106C623B4E55B002360E0 /* StorageKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageKey.swift; sourceTree = "<group>"; };
+		C3E15D8523C5E7CB0089457E /* CentrifugeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentrifugeService.swift; sourceTree = "<group>"; };
+		C3E15D8623C5E7CB0089457E /* CentrifugeBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentrifugeBuilder.swift; sourceTree = "<group>"; };
 		D97F65BA23C1E9F000392C3E /* UserDefaultsProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsProviderTests.swift; sourceTree = "<group>"; };
 		D97F65C123C1F53100392C3E /* CDPersistenceStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDPersistenceStoreTests.swift; sourceTree = "<group>"; };
 		D97F65C523C1F56B00392C3E /* mock-model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "mock-model.xcdatamodel"; sourceTree = "<group>"; };
@@ -165,6 +171,15 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		C3E15D8423C5E66B0089457E /* Centrifugo */ = {
+			isa = PBXGroup;
+			children = (
+				C3E15D8623C5E7CB0089457E /* CentrifugeBuilder.swift */,
+				C3E15D8523C5E7CB0089457E /* CentrifugeService.swift */,
+			);
+			path = Centrifugo;
+			sourceTree = "<group>";
+		};
 		C3EBCECE23B4E3D3002D6426 /* DefaultsStorage */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +202,7 @@
 		C3EBCED023B4E3F2002D6426 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				C3E15D8423C5E66B0089457E /* Centrifugo */,
 				C3A88A9D23B27B3E006D7ACB /* ConnectivityService.swift */,
 			);
 			path = Networking;
@@ -411,9 +427,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3E15D8A23C5E7CB0089457E /* CentrifugeBuilder.swift in Sources */,
 				D97F65C223C1F53100392C3E /* CDPersistenceStoreTests.swift in Sources */,
 				D97F65C623C1F56B00392C3E /* mock-model.xcdatamodeld in Sources */,
 				D97F65BB23C1E9F000392C3E /* UserDefaultsProviderTests.swift in Sources */,
+				C3E15D8823C5E7CB0089457E /* CentrifugeService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,9 +440,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3A88AA023B27B52006D7ACB /* CDPersistenceStore.swift in Sources */,
+				C3E15D8723C5E7CB0089457E /* CentrifugeService.swift in Sources */,
 				C3D106C723B4E55B002360E0 /* StorageKey.swift in Sources */,
 				C3A88AA923B27BDB006D7ACB /* MultitaskUIHandler.swift in Sources */,
 				C3A88A9823B27B0E006D7ACB /* SecureStorageProvider.swift in Sources */,
+				C3E15D8923C5E7CB0089457E /* CentrifugeBuilder.swift in Sources */,
 				C3A88AA523B27BC6006D7ACB /* KeyboardVisibilityObserver.swift in Sources */,
 				D97F65BC23C1EEC100392C3E /* UserDefaultProvider.swift in Sources */,
 				C3A88AA123B27B52006D7ACB /* CDPersistenceStoreAdapter.swift in Sources */,

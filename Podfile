@@ -5,6 +5,7 @@ inhibit_all_warnings!
 def corePods
   pod 'KeychainAccess'
   pod 'Alamofire'
+  pod 'SwiftCentrifuge'
 end
 
 target 'AltyCore' do
