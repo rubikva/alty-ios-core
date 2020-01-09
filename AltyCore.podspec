@@ -14,7 +14,13 @@ Pod::Spec.new do |spec|
   spec.source        = { :git => "git@bitbucket.org:alterplay/alty-ios-core.git", :tag => "#{spec.version}" }
   spec.source_files  = "AltyCore", "AltyCore/**/*.{h,m,swift}"
 
+  # Networking
   spec.dependency 'Alamofire'
-  spec.dependency 'KeychainAccess'
   spec.dependency 'AltySwiftCentrifuge'
+  # Tools
+  spec.dependency 'KeychainAccess'
+  #DI
+  spec.dependency 'Swinject'
+  spec.dependency 'SwinjectStoryboard'
+
 end
