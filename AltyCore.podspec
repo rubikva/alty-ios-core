@@ -17,12 +17,10 @@ Pod::Spec.new do |spec|
   # Networking
   spec.dependency 'Alamofire'
   spec.dependency 'AltySwiftCentrifuge'
-
   # Tools
   spec.dependency 'KeychainAccess'
-
   #DI
-  pod 'Swinject'
-  pod 'SwinjectStoryboard', :git => 'https://github.com/Swinject/SwinjectStoryboard.git', :branch => 'master'
+  spec.dependency 'Swinject'
+  spec.dependency 'SwinjectStoryboard'
 
 end
