@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		114085C9687462833E130D72 /* Pods_AltyCoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7AC8A5A0C687C306082C239 /* Pods_AltyCoreTests.framework */; };
 		1A505A79EFC15167DCCAB597 /* Pods_AltyCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36020EF1FCCD6A19F806011 /* Pods_AltyCore.framework */; };
+		87532FAC23C766AE00613078 /* SwinjectStoryboard+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87532FAB23C766AE00613078 /* SwinjectStoryboard+Convenience.swift */; };
+		87532FAF23C76A7100613078 /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87532FAE23C76A7100613078 /* ModuleFactory.swift */; };
 		C31C7A5223B4EE0D00F17226 /* AltyCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A88A6823B25C38006D7ACB /* AltyCore.framework */; };
 		C3A88A6D23B25C38006D7ACB /* AltyCore.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A88A6B23B25C38006D7ACB /* AltyCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3A88A9823B27B0E006D7ACB /* SecureStorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88A9723B27B0E006D7ACB /* SecureStorageProvider.swift */; };
@@ -42,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		7C7C9C8A223858E3DD1F4750 /* Pods-AltyCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltyCore.release.xcconfig"; path = "Target Support Files/Pods-AltyCore/Pods-AltyCore.release.xcconfig"; sourceTree = "<group>"; };
+		87532FAB23C766AE00613078 /* SwinjectStoryboard+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Convenience.swift"; sourceTree = "<group>"; };
+		87532FAE23C76A7100613078 /* ModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactory.swift; sourceTree = "<group>"; };
 		BF2DF97EFF8A64E07030239B /* Pods-AltyCoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltyCoreTests.release.xcconfig"; path = "Target Support Files/Pods-AltyCoreTests/Pods-AltyCoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		C20E87BF779FBF1DB08B0BBA /* Pods-AltyCoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltyCoreTests.debug.xcconfig"; path = "Target Support Files/Pods-AltyCoreTests/Pods-AltyCoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C31C7A4D23B4EE0D00F17226 /* AltyCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AltyCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +101,22 @@
 				E7AC8A5A0C687C306082C239 /* Pods_AltyCoreTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		87532FAA23C7668100613078 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				87532FAB23C766AE00613078 /* SwinjectStoryboard+Convenience.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		87532FAD23C76A5E00613078 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				87532FAE23C76A7100613078 /* ModuleFactory.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		9899E7890562FFC67A10BCC0 /* Pods */ = {
@@ -167,6 +187,8 @@
 				C3EBCED123B4E403002D6426 /* Authentication */,
 				C3EBCED223B4E41F002D6426 /* Tools */,
 				C3EBCED023B4E3F2002D6426 /* Networking */,
+				87532FAA23C7668100613078 /* Extension */,
+				87532FAD23C76A5E00613078 /* Factories */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -444,6 +466,8 @@
 				C3D106C723B4E55B002360E0 /* StorageKey.swift in Sources */,
 				C3A88AA923B27BDB006D7ACB /* MultitaskUIHandler.swift in Sources */,
 				C3A88A9823B27B0E006D7ACB /* SecureStorageProvider.swift in Sources */,
+				87532FAC23C766AE00613078 /* SwinjectStoryboard+Convenience.swift in Sources */,
+				87532FAF23C76A7100613078 /* ModuleFactory.swift in Sources */,
 				C3E15D8923C5E7CB0089457E /* CentrifugeBuilder.swift in Sources */,
 				C3A88AA523B27BC6006D7ACB /* KeyboardVisibilityObserver.swift in Sources */,
 				D97F65BC23C1EEC100392C3E /* UserDefaultProvider.swift in Sources */,
