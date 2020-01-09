@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "AltyCore"
-  spec.version      = "0.0.4"
+  spec.version      = "0.0.5"
   spec.summary      = "extracted base functionality"
   spec.description  = "AltyCore is pod with shared core functionality"
 
@@ -16,4 +16,5 @@ Pod::Spec.new do |spec|
 
   spec.dependency 'Alamofire'
   spec.dependency 'KeychainAccess'
+  spec.dependency 'AltySwiftCentrifuge'
 end

@@ -1,16 +1,27 @@
 PODS:
   - Alamofire (4.9.1)
+  - AltySwiftCentrifuge (0.0.4):
+    - Starscream (~> 3.1)
+    - SwiftProtobuf
   - InstantMock (2.5.4)
   - KeychainAccess (4.1.0)
   - Nimble (8.0.4)
+  - Starscream (3.1.1)
+  - SwiftProtobuf (1.7.0)
 
 DEPENDENCIES:
   - Alamofire
+  - AltySwiftCentrifuge
   - InstantMock
   - KeychainAccess
   - Nimble
 
 SPEC REPOS:
+  "git@bitbucket.org:alterplay/alty-ios-podspecs.git":
+    - AltySwiftCentrifuge
+  https://github.com/CocoaPods/Specs.git:
+    - Starscream
+    - SwiftProtobuf
   trunk:
     - Alamofire
     - InstantMock
@@ -19,10 +30,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AltySwiftCentrifuge: eb55f011f2641e6fb9630fcf3cee3a3473e9f6ce
   InstantMock: b078864ae725de35aff01510afa8b668b666fc2d
   KeychainAccess: 445e28864fe6d3458b41fa211bcdc39890e8bd5a
   Nimble: 18d5360282923225d62b09d781f63abc1a0111fc
+  Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
+  SwiftProtobuf: 4fd9645e69b72cbae6ec8da5be0cdd20ca6565dd
 
-PODFILE CHECKSUM: 3a23897e71c577bf4f9ac5921823db164f994a19
+PODFILE CHECKSUM: f41b6d3ce5433087b71fef62b3c55079bb694e0a
 
 COCOAPODS: 1.8.4
