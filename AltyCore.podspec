@@ -16,5 +16,5 @@ Pod::Spec.new do |spec|
 
   spec.dependency 'Alamofire'
   spec.dependency 'KeychainAccess'
-  spec.dependency 'SwiftCentrifuge'
+  spec.dependency 'AltySwiftCentrifuge'
 end
