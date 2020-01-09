@@ -6,28 +6,27 @@
 //  Copyright © 2020 Alty. All rights reserved.
 //
 
-import UIKit
+import Swinject
 import SwinjectStoryboard
 
-struct Module<T> {
-	let moduleInput: T
-    let view: UIViewController
+public struct Module<T> {
+	public let moduleInput: T
+    public let view: UIViewController
+
+	public init(moduleInput: T, view: UIViewController) {
+		self.view = view
+		self.moduleInput = moduleInput
+	}
 }
 
-protocol ModuleFactory {
+public protocol ModuleFactory {
     associatedtype ModuleInput
 
     func createModule() -> Module<ModuleInput>
 }
 
-extension ModuleFactory {
-    func make<T: UIViewController>(_: T.Type) -> T {
-
-//		class func create(name: String, bundle: Bundle, resolver: Container) -> SwinjectStoryboard {
-
-
-
-		SwinjectStoryboard.instantiateViewController(T.self)
-//        return SwinjectStoryboard.instantiateViewController(T.self)
+public extension ModuleFactory {
+	func make<T: UIViewController>(_: T.Type, resolver: Resolver) -> T {
+		return SwinjectStoryboard.instantiateViewController(T.self, resolver: resolver)
     }
 }
