@@ -16,4 +16,6 @@ public class CentrifugeBuilder {
         
         return client
     }
+    
+    public init() {}
 }

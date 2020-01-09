@@ -12,6 +12,12 @@ public struct APIBackConnectionRequest {
     let endpoint: URL
     let token: String
     let channel: String
+    
+    public init(endpoint: URL, token: String, channel: String) {
+        self.endpoint = endpoint
+        self.token = token
+        self.channel = channel
+    }
 }
 
 public protocol APIBackChannel {
