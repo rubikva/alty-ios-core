@@ -6,9 +6,17 @@ use_frameworks!
 inhibit_all_warnings!
 
 def corePods
-  pod 'KeychainAccess'
+  # DI
+  pod 'Swinject'
+  pod 'SwinjectStoryboard', :git => 'https://github.com/Swinject/SwinjectStoryboard.git', :branch => 'master'
+
+  # Networking
   pod 'Alamofire'
-  pod 'AltySwiftCentrifuge'
+	pod 'AltySwiftCentrifuge'
+
+  # Tools
+	pod 'KeychainAccess'
+
 end
 
 target 'AltyCore' do
