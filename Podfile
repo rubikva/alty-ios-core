@@ -7,8 +7,8 @@ inhibit_all_warnings!
 
 def corePods
   # DI
-  pod 'Swinject'
-  pod 'SwinjectStoryboard', :git => 'https://github.com/Swinject/SwinjectStoryboard.git', :branch => 'master'
+  pod 'Swinject', '~> 2.6.0'
+  pod 'SwinjectStoryboard'
 
   # Networking
   pod 'Alamofire'
