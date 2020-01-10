@@ -7,15 +7,15 @@ inhibit_all_warnings!
 
 def corePods
   # DI
-#  pod 'Swinject', '2.6.2'
-#  pod 'SwinjectStoryboard'
-#
-#  # Networking
-#  pod 'Alamofire'
-#	pod 'AltySwiftCentrifuge'
-#
-#  # Tools
-#	pod 'KeychainAccess'
+  pod 'Swinject', '2.6.2'
+  pod 'SwinjectStoryboard'
+
+  # Networking
+  pod 'Alamofire'
+	pod 'AltySwiftCentrifuge'
+
+  # Tools
+	pod 'KeychainAccess'
 
 end
 

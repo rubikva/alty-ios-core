@@ -20,7 +20,6 @@ Pod::Spec.new do |spec|
   # Tools
   spec.dependency 'KeychainAccess'
   #DI
-  spec.dependency 'Swinject'
+  spec.dependency 'Swinject', '2.6.2'
   spec.dependency 'SwinjectStoryboard'
-
 end
