@@ -10,14 +10,22 @@ import Swinject
 import SwinjectStoryboard
 
 extension SwinjectStoryboard {
-	class func instantiateViewController<T: UIViewController>(_: T.Type, resolver: Resolver) -> T {
+	class func instantiateViewController<T: UIViewController>(_: T.Type, bundleIdentifier: String, resolver: Resolver) -> T {
+		let resourceBundle = bundleFor(T.self, bundleIdentifier: bundleIdentifier)
         let identifier = String(describing: type(of: T.self)).components(separatedBy: ".").first!
-		let storyboard = SwinjectStoryboard.create(name: identifier, resolver: resolver)
+		let storyboard = SwinjectStoryboard.create(name: identifier, bundle: resourceBundle, resolver: resolver)
         let controller = storyboard.instantiateViewController(withIdentifier: identifier) as! T
         return controller
     }
 
-	class func create(name: String, resolver: Resolver) -> SwinjectStoryboard {
-		return SwinjectStoryboard.create(name: name, bundle: nil, container: resolver)
+	class func bundleFor<T: UIViewController>(_: T.Type, bundleIdentifier: String) -> Bundle? {
+		let currentBundle = Bundle(for: T.self)
+		guard let currentBundleURL = currentBundle.resourceURL?.appendingPathComponent(bundleIdentifier + ".bundle") else { return nil }
+		let resourceBundle = Bundle(url: currentBundleURL)
+		return resourceBundle
+	}
+
+	class func create(name: String, bundle: Bundle?, resolver: Resolver) -> SwinjectStoryboard {
+		return SwinjectStoryboard.create(name: name, bundle: bundle, container: resolver)
     }
 }
