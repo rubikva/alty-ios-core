@@ -7,7 +7,7 @@ inhibit_all_warnings!
 
 def corePods
   # DI
-  pod 'Swinject', '~> 2.6.0'
+  pod 'Swinject', '2.6.2'
   pod 'SwinjectStoryboard'
 
   # Networking

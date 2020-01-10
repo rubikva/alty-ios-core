@@ -8,9 +8,9 @@ PODS:
   - Nimble (8.0.4)
   - Starscream (3.1.1)
   - SwiftProtobuf (1.7.0)
-  - Swinject (2.7.1)
+  - Swinject (2.6.2)
   - SwinjectStoryboard (2.2.0):
-    - Swinject (~> 2.7.1)
+    - Swinject (~> 2.6)
 
 DEPENDENCIES:
   - Alamofire
@@ -18,8 +18,8 @@ DEPENDENCIES:
   - InstantMock
   - KeychainAccess
   - Nimble
-  - Swinject
-  - SwinjectStoryboard (from `https://github.com/Swinject/SwinjectStoryboard.git`, branch `master`)
+  - Swinject (= 2.6.2)
+  - SwinjectStoryboard
 
 SPEC REPOS:
   "git@bitbucket.org:alterplay/alty-ios-podspecs":
@@ -28,21 +28,12 @@ SPEC REPOS:
     - Starscream
     - SwiftProtobuf
     - Swinject
+    - SwinjectStoryboard
   trunk:
     - Alamofire
     - InstantMock
     - KeychainAccess
     - Nimble
-
-EXTERNAL SOURCES:
-  SwinjectStoryboard:
-    :branch: master
-    :git: https://github.com/Swinject/SwinjectStoryboard.git
-
-CHECKOUT OPTIONS:
-  SwinjectStoryboard:
-    :commit: 0ca45c83a8aa398c153d8a036c95abb4343cfa0c
-    :git: https://github.com/Swinject/SwinjectStoryboard.git
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -52,9 +43,9 @@ SPEC CHECKSUMS:
   Nimble: 18d5360282923225d62b09d781f63abc1a0111fc
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
   SwiftProtobuf: 4fd9645e69b72cbae6ec8da5be0cdd20ca6565dd
-  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
-  SwinjectStoryboard: f0d5b1c16459949d6ff1cbb6610107946b18e1f8
+  Swinject: cf7458774b1b00323080a9c67e47a1ee7f9d2af1
+  SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: 21ccd8d228aa25e3ceee56e28c956de08b41c44e
+PODFILE CHECKSUM: 4128bad3d1058e6e23361bf12b255e7e9cd2e71e
 
 COCOAPODS: 1.8.4
