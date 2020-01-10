@@ -6,7 +6,7 @@
 //  Copyright © 2019 Alty. All rights reserved.
 //
 
-import SwiftCentrifuge
+import AltySwiftCentrifuge
 
 public class CentrifugeBuilder {
     public func buildClient(endpoint: URL, token: String) -> CentrifugeClient {
