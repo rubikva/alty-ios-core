@@ -1,0 +1,8 @@
+${PODS_ROOT}/Target Support Files/Pods-AltyCoreTests/Pods-AltyCoreTests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/AltySwiftCentrifuge/AltySwiftCentrifuge.framework
+${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework
+${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework
+${BUILT_PRODUCTS_DIR}/SwiftProtobuf/SwiftProtobuf.framework
+${BUILT_PRODUCTS_DIR}/InstantMock/InstantMock.framework
+${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework

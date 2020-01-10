@@ -1,0 +1,6 @@
+framework module AltySwiftCentrifuge {
+  umbrella header "AltySwiftCentrifuge-umbrella.h"
+
+  export *
+  module * { export * }
+}
