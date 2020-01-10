@@ -26,6 +26,11 @@ public protocol ModuleFactory {
 }
 
 public extension ModuleFactory {
+    
+    func make<T: UIViewController>(_: T.Type, bundle: Bundle, resolver: Resolver) -> T {
+        return SwinjectStoryboard.instantiateViewController(T.self, bundle: bundle, resolver: resolver)
+    }
+    
 	func make<T: UIViewController>(_: T.Type, bundleIdentifier: String, resolver: Resolver) -> T {
 		return SwinjectStoryboard.instantiateViewController(T.self, bundleIdentifier: bundleIdentifier, resolver: resolver)
     }
