@@ -1,4 +1,4 @@
-framework module SwiftCentrifuge {
+framework module AltySwiftCentrifuge {
   umbrella header "AltySwiftCentrifuge-umbrella.h"
 
   export *

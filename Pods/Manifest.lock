@@ -1,13 +1,16 @@
 PODS:
   - Alamofire (4.9.1)
-  - AltySwiftCentrifuge (0.0.4):
-    - Starscream (~> 3.1)
+  - AltySwiftCentrifuge (0.0.3):
+    - Starscream (~> 3)
     - SwiftProtobuf
   - InstantMock (2.5.4)
   - KeychainAccess (4.1.0)
-  - Nimble (8.0.4)
+  - Nimble (8.0.5)
   - Starscream (3.1.1)
   - SwiftProtobuf (1.7.0)
+  - Swinject (2.6.2)
+  - SwinjectStoryboard (2.2.0):
+    - Swinject (~> 2.6)
 
 DEPENDENCIES:
   - Alamofire
@@ -15,28 +18,33 @@ DEPENDENCIES:
   - InstantMock
   - KeychainAccess
   - Nimble
+  - Swinject (= 2.6.2)
+  - SwinjectStoryboard
 
 SPEC REPOS:
-  "git@bitbucket.org:alterplay/alty-ios-podspecs.git":
+  "git@bitbucket.org:alterplay/alty-ios-podspecs":
     - AltySwiftCentrifuge
   https://github.com/CocoaPods/Specs.git:
-    - Starscream
-    - SwiftProtobuf
-  trunk:
     - Alamofire
     - InstantMock
     - KeychainAccess
     - Nimble
+    - Starscream
+    - SwiftProtobuf
+    - Swinject
+    - SwinjectStoryboard
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  AltySwiftCentrifuge: eb55f011f2641e6fb9630fcf3cee3a3473e9f6ce
+  AltySwiftCentrifuge: 11aa61c1f5ea489475fcb91b48241b0eb8f76611
   InstantMock: b078864ae725de35aff01510afa8b668b666fc2d
   KeychainAccess: 445e28864fe6d3458b41fa211bcdc39890e8bd5a
-  Nimble: 18d5360282923225d62b09d781f63abc1a0111fc
+  Nimble: 4ab1aeb9b45553c75b9687196b0fa0713170a332
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
   SwiftProtobuf: 4fd9645e69b72cbae6ec8da5be0cdd20ca6565dd
+  Swinject: cf7458774b1b00323080a9c67e47a1ee7f9d2af1
+  SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: f41b6d3ce5433087b71fef62b3c55079bb694e0a
+PODFILE CHECKSUM: c923970df6da489be5717a52245344b200d98547
 
 COCOAPODS: 1.8.4

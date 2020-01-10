@@ -6,9 +6,17 @@ use_frameworks!
 inhibit_all_warnings!
 
 def corePods
-  pod 'KeychainAccess'
+  # DI
+  pod 'Swinject', '2.6.2'
+  pod 'SwinjectStoryboard'
+
+  # Networking
   pod 'Alamofire'
-  pod 'AltySwiftCentrifuge'
+	pod 'AltySwiftCentrifuge'
+
+  # Tools
+	pod 'KeychainAccess'
+
 end
 
 target 'AltyCore' do

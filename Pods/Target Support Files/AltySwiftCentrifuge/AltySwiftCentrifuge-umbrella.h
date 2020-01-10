@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double SwiftCentrifugeVersionNumber;
-FOUNDATION_EXPORT const unsigned char SwiftCentrifugeVersionString[];
+FOUNDATION_EXPORT double AltySwiftCentrifugeVersionNumber;
+FOUNDATION_EXPORT const unsigned char AltySwiftCentrifugeVersionString[];
 

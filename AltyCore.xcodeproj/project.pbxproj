@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		114085C9687462833E130D72 /* Pods_AltyCoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7AC8A5A0C687C306082C239 /* Pods_AltyCoreTests.framework */; };
-		1A505A79EFC15167DCCAB597 /* Pods_AltyCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36020EF1FCCD6A19F806011 /* Pods_AltyCore.framework */; };
+		5ACAC41580DA88E47C71925F /* Pods_AltyCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42C5488FCD43E7884870DE4 /* Pods_AltyCore.framework */; };
+		87532FAC23C766AE00613078 /* SwinjectStoryboard+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87532FAB23C766AE00613078 /* SwinjectStoryboard+Convenience.swift */; };
+		87532FAF23C76A7100613078 /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87532FAE23C76A7100613078 /* ModuleFactory.swift */; };
+		9E9358698A15F9C11C636F23 /* Pods_AltyCoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D941CC5DEBF7D40DC02727 /* Pods_AltyCoreTests.framework */; };
 		C31C7A5223B4EE0D00F17226 /* AltyCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A88A6823B25C38006D7ACB /* AltyCore.framework */; };
 		C3A88A6D23B25C38006D7ACB /* AltyCore.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A88A6B23B25C38006D7ACB /* AltyCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3A88A9823B27B0E006D7ACB /* SecureStorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88A9723B27B0E006D7ACB /* SecureStorageProvider.swift */; };
@@ -41,12 +43,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7C7C9C8A223858E3DD1F4750 /* Pods-AltyCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltyCore.release.xcconfig"; path = "Target Support Files/Pods-AltyCore/Pods-AltyCore.release.xcconfig"; sourceTree = "<group>"; };
-		BF2DF97EFF8A64E07030239B /* Pods-AltyCoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltyCoreTests.release.xcconfig"; path = "Target Support Files/Pods-AltyCoreTests/Pods-AltyCoreTests.release.xcconfig"; sourceTree = "<group>"; };
-		C20E87BF779FBF1DB08B0BBA /* Pods-AltyCoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltyCoreTests.debug.xcconfig"; path = "Target Support Files/Pods-AltyCoreTests/Pods-AltyCoreTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1DA1973DB8DB412A575B9B00 /* Pods-AltyCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltyCore.release.xcconfig"; path = "Target Support Files/Pods-AltyCore/Pods-AltyCore.release.xcconfig"; sourceTree = "<group>"; };
+		4970DF5B9AAA371FB314A4EB /* Pods-AltyCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltyCore.debug.xcconfig"; path = "Target Support Files/Pods-AltyCore/Pods-AltyCore.debug.xcconfig"; sourceTree = "<group>"; };
+		5ABEF9829DE8D4EFAD012ADC /* Pods-AltyCoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltyCoreTests.release.xcconfig"; path = "Target Support Files/Pods-AltyCoreTests/Pods-AltyCoreTests.release.xcconfig"; sourceTree = "<group>"; };
+		87532FAB23C766AE00613078 /* SwinjectStoryboard+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Convenience.swift"; sourceTree = "<group>"; };
+		87532FAE23C76A7100613078 /* ModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactory.swift; sourceTree = "<group>"; };
+		A42C5488FCD43E7884870DE4 /* Pods_AltyCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AltyCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0D941CC5DEBF7D40DC02727 /* Pods_AltyCoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AltyCoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C31C7A4D23B4EE0D00F17226 /* AltyCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AltyCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C31C7A5123B4EE0D00F17226 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C36020EF1FCCD6A19F806011 /* Pods_AltyCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AltyCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A88A6823B25C38006D7ACB /* AltyCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AltyCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A88A6B23B25C38006D7ACB /* AltyCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AltyCore.h; sourceTree = "<group>"; };
 		C3A88A6C23B25C38006D7ACB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,8 +70,7 @@
 		D97F65BA23C1E9F000392C3E /* UserDefaultsProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsProviderTests.swift; sourceTree = "<group>"; };
 		D97F65C123C1F53100392C3E /* CDPersistenceStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDPersistenceStoreTests.swift; sourceTree = "<group>"; };
 		D97F65C523C1F56B00392C3E /* mock-model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "mock-model.xcdatamodel"; sourceTree = "<group>"; };
-		E7AC8A5A0C687C306082C239 /* Pods_AltyCoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AltyCoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB2901D0D7236A6FA611B728 /* Pods-AltyCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltyCore.debug.xcconfig"; path = "Target Support Files/Pods-AltyCore/Pods-AltyCore.debug.xcconfig"; sourceTree = "<group>"; };
+		F1B3D1C2CF941A91FA6704B7 /* Pods-AltyCoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltyCoreTests.debug.xcconfig"; path = "Target Support Files/Pods-AltyCoreTests/Pods-AltyCoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +79,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C31C7A5223B4EE0D00F17226 /* AltyCore.framework in Frameworks */,
-				114085C9687462833E130D72 /* Pods_AltyCoreTests.framework in Frameworks */,
+				9E9358698A15F9C11C636F23 /* Pods_AltyCoreTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,29 +87,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A505A79EFC15167DCCAB597 /* Pods_AltyCore.framework in Frameworks */,
+				5ACAC41580DA88E47C71925F /* Pods_AltyCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		25E7F8DBF44DAC19B5767C5F /* Frameworks */ = {
+		63BE893FEB9F87ABF8587ED1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C36020EF1FCCD6A19F806011 /* Pods_AltyCore.framework */,
-				E7AC8A5A0C687C306082C239 /* Pods_AltyCoreTests.framework */,
+				A42C5488FCD43E7884870DE4 /* Pods_AltyCore.framework */,
+				C0D941CC5DEBF7D40DC02727 /* Pods_AltyCoreTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		87532FAA23C7668100613078 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				87532FAB23C766AE00613078 /* SwinjectStoryboard+Convenience.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		87532FAD23C76A5E00613078 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				87532FAE23C76A7100613078 /* ModuleFactory.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		9899E7890562FFC67A10BCC0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EB2901D0D7236A6FA611B728 /* Pods-AltyCore.debug.xcconfig */,
-				7C7C9C8A223858E3DD1F4750 /* Pods-AltyCore.release.xcconfig */,
-				C20E87BF779FBF1DB08B0BBA /* Pods-AltyCoreTests.debug.xcconfig */,
-				BF2DF97EFF8A64E07030239B /* Pods-AltyCoreTests.release.xcconfig */,
+				4970DF5B9AAA371FB314A4EB /* Pods-AltyCore.debug.xcconfig */,
+				1DA1973DB8DB412A575B9B00 /* Pods-AltyCore.release.xcconfig */,
+				F1B3D1C2CF941A91FA6704B7 /* Pods-AltyCoreTests.debug.xcconfig */,
+				5ABEF9829DE8D4EFAD012ADC /* Pods-AltyCoreTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -137,7 +157,7 @@
 				C31C7A4E23B4EE0D00F17226 /* AltyCoreTests */,
 				C3A88A6923B25C38006D7ACB /* Products */,
 				9899E7890562FFC67A10BCC0 /* Pods */,
-				25E7F8DBF44DAC19B5767C5F /* Frameworks */,
+				63BE893FEB9F87ABF8587ED1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,6 +187,8 @@
 				C3EBCED123B4E403002D6426 /* Authentication */,
 				C3EBCED223B4E41F002D6426 /* Tools */,
 				C3EBCED023B4E3F2002D6426 /* Networking */,
+				87532FAA23C7668100613078 /* Extension */,
+				87532FAD23C76A5E00613078 /* Factories */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -268,11 +290,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C31C7A5723B4EE0D00F17226 /* Build configuration list for PBXNativeTarget "AltyCoreTests" */;
 			buildPhases = (
-				6C8246B996EDB79E376A909B /* [CP] Check Pods Manifest.lock */,
+				AB97E593B0D64A1623A2839C /* [CP] Check Pods Manifest.lock */,
 				C31C7A4923B4EE0D00F17226 /* Sources */,
 				C31C7A4A23B4EE0D00F17226 /* Frameworks */,
 				C31C7A4B23B4EE0D00F17226 /* Resources */,
-				9D5272E51BB89E2282085105 /* [CP] Embed Pods Frameworks */,
+				AF0D8B17B43ECB522A3EC4A4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -288,7 +310,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3A88A7023B25C38006D7ACB /* Build configuration list for PBXNativeTarget "AltyCore" */;
 			buildPhases = (
-				29991F7D947123896EF3FBB9 /* [CP] Check Pods Manifest.lock */,
+				B23AAD715EDF4376FABE8A76 /* [CP] Check Pods Manifest.lock */,
 				C3A88A6323B25C38006D7ACB /* Headers */,
 				C3A88A6423B25C38006D7ACB /* Sources */,
 				C3A88A6523B25C38006D7ACB /* Frameworks */,
@@ -359,29 +381,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		29991F7D947123896EF3FBB9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AltyCore-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6C8246B996EDB79E376A909B /* [CP] Check Pods Manifest.lock */ = {
+		AB97E593B0D64A1623A2839C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -403,7 +403,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9D5272E51BB89E2282085105 /* [CP] Embed Pods Frameworks */ = {
+		AF0D8B17B43ECB522A3EC4A4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -418,6 +418,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AltyCoreTests/Pods-AltyCoreTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B23AAD715EDF4376FABE8A76 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AltyCore-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -444,6 +466,8 @@
 				C3D106C723B4E55B002360E0 /* StorageKey.swift in Sources */,
 				C3A88AA923B27BDB006D7ACB /* MultitaskUIHandler.swift in Sources */,
 				C3A88A9823B27B0E006D7ACB /* SecureStorageProvider.swift in Sources */,
+				87532FAC23C766AE00613078 /* SwinjectStoryboard+Convenience.swift in Sources */,
+				87532FAF23C76A7100613078 /* ModuleFactory.swift in Sources */,
 				C3E15D8923C5E7CB0089457E /* CentrifugeBuilder.swift in Sources */,
 				C3A88AA523B27BC6006D7ACB /* KeyboardVisibilityObserver.swift in Sources */,
 				D97F65BC23C1EEC100392C3E /* UserDefaultProvider.swift in Sources */,
@@ -467,7 +491,7 @@
 /* Begin XCBuildConfiguration section */
 		C31C7A5523B4EE0D00F17226 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C20E87BF779FBF1DB08B0BBA /* Pods-AltyCoreTests.debug.xcconfig */;
+			baseConfigurationReference = F1B3D1C2CF941A91FA6704B7 /* Pods-AltyCoreTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AltyCoreTests/Info.plist;
@@ -485,7 +509,7 @@
 		};
 		C31C7A5623B4EE0D00F17226 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF2DF97EFF8A64E07030239B /* Pods-AltyCoreTests.release.xcconfig */;
+			baseConfigurationReference = 5ABEF9829DE8D4EFAD012ADC /* Pods-AltyCoreTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AltyCoreTests/Info.plist;
@@ -623,7 +647,7 @@
 		};
 		C3A88A7123B25C38006D7ACB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB2901D0D7236A6FA611B728 /* Pods-AltyCore.debug.xcconfig */;
+			baseConfigurationReference = 4970DF5B9AAA371FB314A4EB /* Pods-AltyCore.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -639,7 +663,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.7;
+				MARKETING_VERSION = 0.0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alty.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -652,7 +676,7 @@
 		};
 		C3A88A7223B25C38006D7ACB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C7C9C8A223858E3DD1F4750 /* Pods-AltyCore.release.xcconfig */;
+			baseConfigurationReference = 1DA1973DB8DB412A575B9B00 /* Pods-AltyCore.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -668,7 +692,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.7;
+				MARKETING_VERSION = 0.0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alty.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

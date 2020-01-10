@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "AltyCore"
-  spec.version      = "0.0.6"
+  spec.version      = "0.0.7"
   spec.summary      = "extracted base functionality"
   spec.description  = "AltyCore is pod with shared core functionality"
 
@@ -20,7 +20,6 @@ Pod::Spec.new do |spec|
   # Tools
   spec.dependency 'KeychainAccess'
   #DI
-  spec.dependency 'Swinject'
+  spec.dependency 'Swinject', '2.6.2'
   spec.dependency 'SwinjectStoryboard'
-
 end
