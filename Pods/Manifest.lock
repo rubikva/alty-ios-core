@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (4.9.1)
-  - AltySwiftCentrifuge (0.0.3):
+  - AltySwiftCentrifuge (0.0.5):
     - Starscream (~> 3)
     - SwiftProtobuf
   - InstantMock (2.5.4)
@@ -36,7 +36,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  AltySwiftCentrifuge: 11aa61c1f5ea489475fcb91b48241b0eb8f76611
+  AltySwiftCentrifuge: 1ec1e434cba1d85efb266361c3f81f324ad301d5
   InstantMock: b078864ae725de35aff01510afa8b668b666fc2d
   KeychainAccess: 445e28864fe6d3458b41fa211bcdc39890e8bd5a
   Nimble: 4ab1aeb9b45553c75b9687196b0fa0713170a332
@@ -45,6 +45,6 @@ SPEC CHECKSUMS:
   Swinject: cf7458774b1b00323080a9c67e47a1ee7f9d2af1
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: c923970df6da489be5717a52245344b200d98547
+PODFILE CHECKSUM: 4128bad3d1058e6e23361bf12b255e7e9cd2e71e
 
 COCOAPODS: 1.8.4
