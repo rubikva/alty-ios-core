@@ -9,7 +9,13 @@
 import AltySwiftCentrifuge
 
 public class CentrifugeBuilder {
-    public func buildClient(endpoint: URL, token: String) -> CentrifugeClient {
+    
+    public struct ClientSSLCertInfo {
+        let url: URL
+        let password: String
+    }
+    
+    public func buildClient(endpoint: URL, token: String, clientSSLCert: ClientSSLCertInfo? = nil) -> CentrifugeClient {
         let config = CentrifugeClientConfig()
         let client = CentrifugeClient(url: endpoint.absoluteString, config: config)
         client.setToken(token)
