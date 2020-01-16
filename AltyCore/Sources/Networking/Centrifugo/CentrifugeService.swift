@@ -51,8 +51,6 @@ public class CentrifugeService: APIBackChannel {
     }
     
     public func connect(_ request: APIBackConnectionRequest) {
-        print("Connecting: %@ : %@", request.token, request.channel)
-        
         disconnect()
         client = clientBuilder.buildClient(endpoint: request.endpoint,
                                            token: request.token,
