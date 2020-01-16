@@ -8,15 +8,22 @@
 
 import AltySwiftCentrifuge
 
+public struct ClientSSLCertInfo {
+    let url: URL
+    let password: String
+}
+
 public struct APIBackConnectionRequest {
     let endpoint: URL
     let token: String
     let channel: String
+    var sslCertInfo: ClientSSLCertInfo? = nil
     
-    public init(endpoint: URL, token: String, channel: String) {
+    public init(endpoint: URL, token: String, channel: String, sslCertInfo: ClientSSLCertInfo? = nil) {
         self.endpoint = endpoint
         self.token = token
         self.channel = channel
+        self.sslCertInfo = sslCertInfo
     }
 }
 
@@ -42,7 +49,9 @@ public class CentrifugeService: APIBackChannel {
         print("Connecting: %@ : %@", request.token, request.channel)
         
         disconnect()
-        client = clientBuilder.buildClient(endpoint: request.endpoint, token: request.token)
+        client = clientBuilder.buildClient(endpoint: request.endpoint,
+                                           token: request.token,
+                                           clientSSLCert: request.sslCertInfo)
         client?.delegate = self
         client?.connect()
         
