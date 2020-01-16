@@ -9,8 +9,13 @@
 import AltySwiftCentrifuge
 
 public struct ClientSSLCertInfo {
-    let url: URL
+    let URL: URL
     let password: String
+    
+    public init(URL: URL, password: String) {
+        self.URL = URL
+        self.password = password
+    }
 }
 
 public struct APIBackConnectionRequest {
