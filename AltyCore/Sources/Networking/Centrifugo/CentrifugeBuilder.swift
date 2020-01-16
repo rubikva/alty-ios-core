@@ -16,7 +16,10 @@ public class CentrifugeBuilder {
     }
     
     public func buildClient(endpoint: URL, token: String, clientSSLCert: ClientSSLCertInfo? = nil) -> CentrifugeClient {
-        let config = CentrifugeClientConfig()
+        var config = CentrifugeClientConfig()
+        clientSSLCert.flatMap {
+            config.clientSSLCertificate = CentrifugePKCS12SSLCertInfo(URL: $0.url, password: $0.password)
+        }
         let client = CentrifugeClient(url: endpoint.absoluteString, config: config)
         client.setToken(token)
         
