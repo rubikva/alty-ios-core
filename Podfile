@@ -12,7 +12,7 @@ def corePods
 
   # Networking
   pod 'Alamofire'
-	pod 'SwiftCentrifuge', :git => 'https://github.com/Alterplay/centrifuge-swift'
+	pod 'AltySwiftCentrifuge'
 
   # Tools
 	pod 'KeychainAccess'
