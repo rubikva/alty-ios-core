@@ -4,14 +4,14 @@ Pod::Spec.new do |spec|
   spec.summary      = "extracted base functionality"
   spec.description  = "AltyCore is pod with shared core functionality"
 
-  spec.homepage     = "git@github.com:Alterplay/alty-ios-core.git"
+  spec.homepage     = "https://bitbucket.org/alterplay/alty-ios-core/src/develop/"
   spec.license      = { :type => "MIT", :text => "" }
   spec.author       = { "Serhii Horielov" => "s.horielov@alterplay.com" }
 
   spec.platform      = :ios, "12.0"
   spec.swift_version = '5.0'
 
-  spec.source        = { :git => "git@github.com:Alterplay/alty-ios-core.git", :tag => "#{spec.version}" }
+  spec.source        = { :git => "git@bitbucket.org:alterplay/alty-ios-core.git", :tag => "#{spec.version}" }
   spec.source_files  = "AltyCore", "AltyCore/**/*.{h,m,swift}"
 
   # Networking
