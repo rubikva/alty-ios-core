@@ -45,19 +45,23 @@ if [ -d "$TRUNK_DIR" ]; then rm -Rf $TRUNK_DIR; fi
 git clone git@bitbucket.org:alterplay/alty-ios-podspecs.git $TRUNK_DIR
 
 # Add directory with tag name, copy podspec, push
+# Overwrite podspec in case it exists
 TAG_DIR="$TRUNK_DIR/Specs/$PROJECT_NAME/$VERSION_NUMBER"
 if [ ! -d "$TAG_DIR" ]; then 
+  echo "Adding directory for $VERSION_NUMBER version..."
   mkdir $TAG_DIR
   cp ./$PODSPEC_FILE $TAG_DIR
-  cd $TRUNK_DIR
-  git add .
-  git commit -am "$VERSION_NUMBER"
-  git push origin master
-
-  # Cleanup
-  cd ~
-  rm -Rf $TRUNK_DIR
 else
-  echo "Directory for $VERSION_NUMBER" exists in trunk repo, skipping...
+  echo "Directory for $VERSION_NUMBER exists in trunk repo, overwriting podspec..."
+  cp -rf ./$PODSPEC_FILE $TAG_DIR
 fi
 
+# Commit trunk changes
+cd $TRUNK_DIR
+git add .
+git commit -am "$VERSION_NUMBER"
+git push origin master
+
+# Cleanup
+cd ~
+rm -Rf $TRUNK_DIR
