@@ -12,6 +12,10 @@
 		87532FAF23C76A7100613078 /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87532FAE23C76A7100613078 /* ModuleFactory.swift */; };
 		9E9358698A15F9C11C636F23 /* Pods_AltyCoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D941CC5DEBF7D40DC02727 /* Pods_AltyCoreTests.framework */; };
 		C31C7A5223B4EE0D00F17226 /* AltyCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A88A6823B25C38006D7ACB /* AltyCore.framework */; };
+		C399E39123D8C3BB0086A1AB /* UIApplication+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = C399E38D23D8C3BA0086A1AB /* UIApplication+Convenience.swift */; };
+		C399E39223D8C3BB0086A1AB /* UIColor+hexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C399E38E23D8C3BA0086A1AB /* UIColor+hexString.swift */; };
+		C399E39323D8C3BB0086A1AB /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C399E38F23D8C3BA0086A1AB /* UIView+Layout.swift */; };
+		C399E39423D8C3BB0086A1AB /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C399E39023D8C3BB0086A1AB /* NibView.swift */; };
 		C3A88A6D23B25C38006D7ACB /* AltyCore.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A88A6B23B25C38006D7ACB /* AltyCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3A88A9823B27B0E006D7ACB /* SecureStorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88A9723B27B0E006D7ACB /* SecureStorageProvider.swift */; };
 		C3A88AA023B27B52006D7ACB /* CDPersistenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A88A9E23B27B52006D7ACB /* CDPersistenceStore.swift */; };
@@ -52,6 +56,10 @@
 		C0D941CC5DEBF7D40DC02727 /* Pods_AltyCoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AltyCoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C31C7A4D23B4EE0D00F17226 /* AltyCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AltyCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C31C7A5123B4EE0D00F17226 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C399E38D23D8C3BA0086A1AB /* UIApplication+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Convenience.swift"; sourceTree = "<group>"; };
+		C399E38E23D8C3BA0086A1AB /* UIColor+hexString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+hexString.swift"; sourceTree = "<group>"; };
+		C399E38F23D8C3BA0086A1AB /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		C399E39023D8C3BB0086A1AB /* NibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
 		C3A88A6823B25C38006D7ACB /* AltyCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AltyCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A88A6B23B25C38006D7ACB /* AltyCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AltyCore.h; sourceTree = "<group>"; };
 		C3A88A6C23B25C38006D7ACB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -152,6 +160,17 @@
 			path = Supporting;
 			sourceTree = "<group>";
 		};
+		C399E38C23D8C3A00086A1AB /* UIKit Convenience */ = {
+			isa = PBXGroup;
+			children = (
+				C399E39023D8C3BB0086A1AB /* NibView.swift */,
+				C399E38D23D8C3BA0086A1AB /* UIApplication+Convenience.swift */,
+				C399E38E23D8C3BA0086A1AB /* UIColor+hexString.swift */,
+				C399E38F23D8C3BA0086A1AB /* UIView+Layout.swift */,
+			);
+			path = "UIKit Convenience";
+			sourceTree = "<group>";
+		};
 		C3A88A5E23B25C38006D7ACB = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +203,7 @@
 		C3A88A9523B27AE3006D7ACB /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C399E38C23D8C3A00086A1AB /* UIKit Convenience */,
 				C3EBCECE23B4E3D3002D6426 /* DefaultsStorage */,
 				C3EBCECF23B4E3E1002D6426 /* Persistence */,
 				C3EBCED123B4E403002D6426 /* Authentication */,
@@ -468,12 +488,16 @@
 				C3D106C723B4E55B002360E0 /* StorageKey.swift in Sources */,
 				C3A88AA923B27BDB006D7ACB /* MultitaskUIHandler.swift in Sources */,
 				C3A88A9823B27B0E006D7ACB /* SecureStorageProvider.swift in Sources */,
+				C399E39323D8C3BB0086A1AB /* UIView+Layout.swift in Sources */,
+				C399E39123D8C3BB0086A1AB /* UIApplication+Convenience.swift in Sources */,
+				C399E39223D8C3BB0086A1AB /* UIColor+hexString.swift in Sources */,
 				87532FAC23C766AE00613078 /* SwinjectStoryboard+Convenience.swift in Sources */,
 				87532FAF23C76A7100613078 /* ModuleFactory.swift in Sources */,
 				C3E15D8923C5E7CB0089457E /* CentrifugeBuilder.swift in Sources */,
 				C3A88AA523B27BC6006D7ACB /* KeyboardVisibilityObserver.swift in Sources */,
 				D97F65BC23C1EEC100392C3E /* UserDefaultProvider.swift in Sources */,
 				C3A88AA123B27B52006D7ACB /* CDPersistenceStoreAdapter.swift in Sources */,
+				C399E39423D8C3BB0086A1AB /* NibView.swift in Sources */,
 				C3A88AA723B27BCE006D7ACB /* BiometricAuthService.swift in Sources */,
 				D97F65BD23C1EED300392C3E /* ConnectivityService.swift in Sources */,
 				C3A88AA323B27BB1006D7ACB /* NotificationCenterService.swift in Sources */,
