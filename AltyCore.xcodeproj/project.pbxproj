@@ -78,7 +78,7 @@
 		D97F65BA23C1E9F000392C3E /* UserDefaultsProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsProviderTests.swift; sourceTree = "<group>"; };
 		D97F65C123C1F53100392C3E /* CDPersistenceStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDPersistenceStoreTests.swift; sourceTree = "<group>"; };
 		D97F65C523C1F56B00392C3E /* mock-model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "mock-model.xcdatamodel"; sourceTree = "<group>"; };
-		D9FF7B3F23D2088B00A1A447 /* AltyCore.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = AltyCore.podspec; sourceTree = SOURCE_ROOT; };
+		D9FF7B3F23D2088B00A1A447 /* AltyCore.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AltyCore.podspec; sourceTree = SOURCE_ROOT; };
 		F1B3D1C2CF941A91FA6704B7 /* Pods-AltyCoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltyCoreTests.debug.xcconfig"; path = "Target Support Files/Pods-AltyCoreTests/Pods-AltyCoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -689,7 +689,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.15;
+				MARKETING_VERSION = 0.0.16;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alty.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -718,7 +718,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.15;
+				MARKETING_VERSION = 0.0.16;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alty.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
